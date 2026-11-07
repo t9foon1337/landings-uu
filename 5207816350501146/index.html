@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Шин-Profi — шиномонтаж, шины и диски на Королёва, 3 к1, Улан-Удэ</title>
 <meta name="description" content="Шиномонтаж, шины и диски, доставка на улице Королёва, 3 к1 в Улан-Удэ. Ежедневно с 10:00 до 20:00. Цены — по телефону или в MAX.">
-<meta name="theme-color" content="#152741">
+<meta name="theme-color" content="#0a0e14">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
@@ -18,20 +18,22 @@
 <link rel="stylesheet" href="assets/fonts/manrope.css">
 <style>
 :root{
-  /* палитра: бетон склада + боковина шины + маркировочная краска */
-  --concrete:#e6e6e1;
-  --concrete-2:#f2f1ec;
-  --ink:#121c2a;
-  --muted:#4f5a67;
-  --navy:#152741;
-  --navy-deep:#0e1b2e;
-  --on-dark:#eef1f4;
-  --on-dark-muted:#a9b5c4;
+  /* палитра: ночная смена на складе — тёмный бетон, стеллажи в тени,
+     маркировочная краска светит единственным тёплым источником */
+  --concrete:#0a0e14;
+  --concrete-2:#101720;
+  --ink:#e9edf2;
+  --muted:#9dabbb;
+  --navy:#141c28;
+  --navy-deep:#070a0f;
+  --on-dark:#e9edf2;
+  --on-dark-muted:#a3b0c0;
   --yellow:#ffcf2e;
-  --yellow-2:#e9b800;
-  --hair:rgba(18,28,42,.16);
-  --hair-2:rgba(18,28,42,.3);
-  --hair-dark:rgba(238,241,244,.2);
+  --yellow-2:#ffdd6b;
+  --hair:rgba(233,237,242,.13);
+  --hair-2:rgba(233,237,242,.28);
+  --hair-dark:rgba(233,237,242,.15);
+  --chalk:rgba(233,237,242,.55);
 
   /* шкала отступов */
   --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:64px; --s9:96px;
@@ -65,7 +67,7 @@ a{color:inherit}
 }
 .btn-primary{background:var(--yellow);color:var(--navy-deep)}
 .btn-primary:hover{background:var(--yellow-2)}
-.btn-primary:active{background:#d4a600}
+.btn-primary:active{background:#e2b71c}
 .btn-ghost{border-color:var(--hair-dark);color:var(--on-dark);font-weight:500}
 .btn-ghost:hover{background:rgba(238,241,244,.08);border-color:rgba(238,241,244,.42)}
 .btn-phone{border-color:var(--hair-2);color:var(--ink);font-weight:500}
@@ -87,7 +89,7 @@ a{color:inherit}
 .top .btn{min-height:44px;padding:0 18px;font-size:15px}
 
 /* --- первый экран --- */
-.hero{background:var(--navy);color:var(--on-dark);padding:var(--s8) 0 0;overflow:hidden}
+.hero{background:radial-gradient(125% 105% at 16% 0%,#1d2839 0%,#131a26 52%,#0b1018 100%);color:var(--on-dark);padding:var(--s8) 0 0;overflow:hidden}
 .hero .wrap{display:grid;grid-template-columns:1.02fr .98fr;gap:var(--s7);align-items:start}
 .hero h1{font-size:clamp(32px,4.9vw,62px);letter-spacing:-.035em;line-height:1.02;max-width:15ch}
 .hero h1 .addr{color:var(--yellow);white-space:nowrap}
@@ -104,7 +106,7 @@ a{color:inherit}
 .hero-cap{margin-top:var(--s3);font-size:13px;color:var(--on-dark-muted)}
 
 /* --- маркировочная полоса --- */
-.mark{background:var(--yellow);color:var(--navy-deep)}
+.mark{background:var(--yellow);color:var(--navy-deep);box-shadow:0 24px 48px -30px rgba(255,207,46,.5)}
 .mark .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--s2) var(--s5);padding-top:13px;padding-bottom:13px;
   font-size:12px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
 
@@ -152,7 +154,7 @@ h2{font-size:clamp(27px,3.4vw,42px);max-width:22ch}
 .score{font-size:clamp(44px,6vw,72px);font-weight:800;letter-spacing:-.045em;line-height:.9;font-variant-numeric:tabular-nums}
 .rev-top p{font-size:15px;color:var(--muted);max-width:30ch}
 .revs{display:grid;grid-template-columns:1fr 1fr;gap:var(--s6) var(--s7)}
-.rev{padding-top:var(--s4);border-top:2px solid var(--ink)}
+.rev{padding-top:var(--s4);border-top:2px solid var(--chalk)}
 .rev blockquote{margin:0;font-size:17px;line-height:1.5}
 .rev.big{grid-column:1/-1;border-top-width:3px}
 .rev.big blockquote{font-size:clamp(18px,1.95vw,23px);line-height:1.45;letter-spacing:-.005em;max-width:56ch}

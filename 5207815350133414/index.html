@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Мотом — автосервис на Трубачеева, 154 в Улан-Удэ: ходовая, мотор, кузов</title>
 <meta name="description" content="СТО «Мотом» на Трубачеева, 154 в Улан-Удэ: ремонт ходовой части и стоек, проточка тормозных дисков, ремонт двигателей, кузовной ремонт, запчасти. Ежедневно 08:00–19:00, 4,8 из 5.">
-<meta name="theme-color" content="#EFEDE7">
+<meta name="theme-color" content="#141519">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
@@ -19,15 +19,20 @@
 <link rel="stylesheet" href="assets/fonts/fonts.css">
 <style>
 :root{
-  /* палитра снята с самих ворот: побелка стены, серый металл, оранжевые буквы на белой табличке */
-  --paper:#EFEDE7;
-  --plate:#FAF8F3;
-  --ink:#17181A;
-  --muted:#54585A;
-  --signal:#A63E14;
-  --signal-dark:#83300F;
-  --line:#CBC7BB;
-  --metal:#6E7379;
+  color-scheme:dark;
+  /* вечерняя смена: бетон и металл ворот в темноте, оранжевая вывеска — единственный тёплый свет */
+  --paper:#141519;
+  --paper-alt:#191B21;
+  --plate:#1D1F24;
+  --ink:#F3F1EB;
+  --muted:#A9ADB4;
+  --body-soft:#C8CBD1;
+  --quote-ink:#DCE0E6;
+  --signal:#FF7A2F;
+  --signal-dark:#FF9B5C;
+  --on-signal:#16110C;
+  --line:#4A4E57;
+  --metal:#0D0E11;
 
   --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:64px; --s9:96px;
   --wrap:1180px;
@@ -35,10 +40,14 @@
   --font-body:"GolosText",Arial,sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%;background:var(--paper)}
 body{
   margin:0;
   background:var(--paper);
+  background-image:
+    radial-gradient(900px 420px at 78% -6%, rgba(255,122,47,.07), rgba(255,122,47,0) 68%),
+    radial-gradient(1200px 700px at 10% 0%, #1B1E24, rgba(27,30,36,0) 70%);
+  background-repeat:no-repeat;
   color:var(--ink);
   font:400 17px/1.55 var(--font-body);
   padding-bottom:0;
@@ -57,7 +66,7 @@ p{margin:0}
   font:600 11px/1 var(--font-head);
   letter-spacing:.19em;
   text-transform:uppercase;
-  color:var(--signal);
+  color:var(--ink);
   background:var(--plate);
   border:1.5px solid var(--signal);
   padding:7px 10px 6px;
@@ -68,17 +77,18 @@ p{margin:0}
   display:inline-flex;align-items:center;justify-content:center;
   min-height:52px;padding:0 var(--s5);
   font:600 15px/1 var(--font-head);letter-spacing:.11em;text-transform:uppercase;
-  color:#fff;background:var(--signal);
+  color:var(--on-signal);background:var(--signal);
   border:1.5px solid var(--signal);
   text-decoration:none;
+  box-shadow:0 0 26px rgba(255,122,47,.16);
   transition:background-color .12s linear,border-color .12s linear;
 }
-.btn:hover{background:var(--signal-dark);border-color:var(--signal-dark);color:#fff}
+.btn:hover{background:var(--signal-dark);border-color:var(--signal-dark);color:var(--on-signal)}
 .btn:active{transform:translateY(1px)}
 .btn--small{min-height:44px;padding:0 var(--s4);font-size:13px}
 
 /* ---------- шапка ---------- */
-.top{border-bottom:1px solid var(--line);background:var(--paper)}
+.top{border-bottom:1px solid var(--line);background:transparent}
 .top__in{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);min-height:72px}
 .brand{display:flex;align-items:baseline;gap:var(--s3);text-decoration:none;color:inherit}
 .brand__name{
@@ -105,7 +115,7 @@ p{margin:0}
 h1{font-size:clamp(42px,6.6vw,84px);text-transform:uppercase;letter-spacing:.01em}
 h1 .line{display:block}
 h1 .line--accent{color:var(--signal)}
-.hero__lead{margin-top:var(--s5);max-width:44ch;font-size:17.5px;color:#33363a}
+.hero__lead{margin-top:var(--s5);max-width:44ch;font-size:17.5px;color:var(--body-soft)}
 .hero__actions{margin-top:var(--s6);display:flex;flex-wrap:wrap;align-items:center;gap:var(--s4) var(--s5)}
 .hero__phone{font:500 16px/1.3 var(--font-head);letter-spacing:.04em;color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--signal);padding-bottom:3px}
 .hero__phone:hover{color:var(--signal);border-color:var(--signal-dark)}
@@ -122,7 +132,7 @@ figcaption{margin-top:var(--s3);font-size:13.5px;line-height:1.45;color:var(--mu
 
 /* ---------- секции ---------- */
 section{padding:var(--s8) 0}
-.band{border-top:1px solid var(--line)}
+.band{border-top:1px solid var(--line);background:var(--paper-alt)}
 .sec-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--s3) var(--s4);margin-bottom:var(--s6)}
 h2{font-size:clamp(27px,3.2vw,40px);text-transform:uppercase}
 
@@ -135,7 +145,7 @@ h2{font-size:clamp(27px,3.2vw,40px);text-transform:uppercase}
   font:400 15px/1.4 var(--font-head);color:var(--muted);letter-spacing:.08em;
 }
 .rows dt{font:500 21px/1.2 var(--font-head);text-transform:uppercase;letter-spacing:.03em;grid-column:2}
-.rows dd{margin:var(--s2) 0 0;color:#3b3e40;font-size:16px;grid-column:2}
+.rows dd{margin:var(--s2) 0 0;color:var(--body-soft);font-size:16px;grid-column:2}
 .works__note{margin-top:var(--s5);font-size:15px;color:var(--muted);max-width:46ch}
 .parts{display:grid;gap:var(--s5)}
 .parts figure{margin:0}
@@ -145,7 +155,7 @@ h2{font-size:clamp(27px,3.2vw,40px);text-transform:uppercase}
 /* цена */
 .price{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:var(--s7);align-items:start}
 .price p+p{margin-top:var(--s4)}
-.price p{max-width:46ch;color:#33363a}
+.price p{max-width:46ch;color:var(--body-soft)}
 .price .plate{margin-bottom:var(--s4)}
 .price figure{margin:0}
 .price img{border:1px solid var(--line)}
@@ -158,7 +168,7 @@ h2{font-size:clamp(27px,3.2vw,40px);text-transform:uppercase}
 .rating span{font-size:14px;color:var(--muted)}
 .quotes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 var(--s7);border-top:1px solid var(--line)}
 .quotes li{padding:var(--s5) 0;border-bottom:1px solid var(--line)}
-.quotes blockquote{margin:0 0 var(--s3);font-size:16.5px;line-height:1.5;color:#2b2e30}
+.quotes blockquote{margin:0 0 var(--s3);font-size:16.5px;line-height:1.5;color:var(--quote-ink)}
 .quotes .who{display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--s2) var(--s3);font-size:13.5px;color:var(--muted)}
 .quotes .who b{font-weight:600;color:var(--ink);font-size:14px}
 .quotes .who a{margin-left:auto;white-space:nowrap}
