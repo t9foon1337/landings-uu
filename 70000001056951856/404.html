@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Страница не найдена — У дяди Баира</title>
+<meta name="description" content="Такой страницы нет. Главная — ходовая, стойки, шиномонтаж на Ключевской, 21/1 в Улан-Удэ.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/fonts/bitter.css">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<style>
+  :root{
+    --sand:#f4ede2; --sand-2:#fbf7f0; --sand-3:#e8dcc6;
+    --ink:#22190f; --ink-soft:#6b5a49; --brick:#8e2f1f; --brick-dark:#6f2317; --line:#cbb9a1;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  body{
+    margin:0;min-height:100vh;display:flex;flex-direction:column;
+    background:var(--sand);color:var(--ink);
+    font:400 17px/1.62 "GolosText",system-ui,"Segoe UI",sans-serif;
+  }
+  .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 24px}
+  .site-head{border-bottom:1px solid var(--line)}
+  .site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-height:44px}
+  .brand:focus-visible{outline:3px solid var(--brick);outline-offset:4px}
+  .brand svg{width:36px;height:36px;flex:none}
+  .brand-name{font:700 20px/1.1 "Bitter",Georgia,serif;display:block}
+  .brand-addr{display:block;font-size:13px;line-height:1.4;color:var(--ink-soft);margin-top:3px}
+  main{flex:1;display:flex;align-items:center;padding:64px 0}
+  .code{font:700 15px/1 "Bitter",Georgia,serif;letter-spacing:.14em;color:var(--brick);margin:0 0 12px}
+  h1{font:700 clamp(28px,4vw,46px)/1.08 "Bitter",Georgia,serif;margin:0 0 16px;max-width:22ch}
+  p{color:var(--ink-soft);max-width:46ch;margin:0 0 24px}
+  .ink-line{display:block;width:168px;height:12px;margin:0 0 24px;color:var(--brick)}
+  .ink-line svg{width:100%;height:100%;display:block}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;
+    border:1px solid var(--brick);border-radius:2px;background:var(--brick);color:var(--sand-2);
+    font:700 16px/1 "GolosText",system-ui,sans-serif;text-decoration:none;
+    transition:background-color .15s ease,border-color .15s ease;
+  }
+  .btn:hover{background:var(--brick-dark);border-color:var(--brick-dark)}
+  .btn:active{transform:translateY(1px)}
+  .btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+  .foot{padding:24px 0;border-top:1px solid var(--line);font-size:13px;line-height:1.6;color:var(--ink-soft)}
+  @media (max-width:600px){
+    .wrap{padding:0 16px}
+    .brand-addr{display:none}
+    .brand svg{width:30px;height:30px}
+    .brand-name{font-size:18px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important}
+    .btn:active{transform:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <circle cx="32" cy="32" r="25" fill="none" stroke="#8e2f1f" stroke-width="5"/>
+        <circle cx="32" cy="32" r="8" fill="none" stroke="#22190f" stroke-width="4"/>
+        <g stroke="#22190f" stroke-width="3" stroke-linecap="round">
+          <path d="M32 7v6M32 51v6M7 32h6M51 32h6"/>
+        </g>
+      </svg>
+      <span>
+        <span class="brand-name">У дяди Баира</span>
+        <span class="brand-addr">Ключевская, 21/1 · Улан-Удэ</span>
+      </span>
+    </a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="code">404</p>
+    <h1>Такой страницы нет</h1>
+    <span class="ink-line" aria-hidden="true">
+      <svg viewBox="0 0 168 12" preserveAspectRatio="none" focusable="false">
+        <path d="M2 8C32 4 64 9 96 6c22-2 44-3 70-2" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+    </span>
+    <p>Адрес, по которому вы пришли, не открылся. Ходовая, стойки, колодки и шиномонтаж живут на главной — там же телефоны и адрес бокса.</p>
+    <a class="btn" href="index.html">На главную</a>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">Демонстрационная страница. Данные и фото — из открытой карточки организации в 2ГИС.</div>
+</footer>
+
+</body>
+</html>

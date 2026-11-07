@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="Маэстро">
+  <rect width="48" height="48" rx="6" fill="#1a302a"/>
+  <g fill="none" stroke="#a4823f" stroke-linecap="round">
+    <circle cx="24" cy="24" r="17.5" stroke-width="1.4"/>
+  </g>
+  <g fill="none" stroke="#f4efe4" stroke-linecap="round">
+    <line x1="17" y1="17" x2="30" y2="30" stroke-width="2.8"/>
+    <line x1="31" y1="17" x2="18" y2="30" stroke-width="2.8"/>
+    <circle cx="15.6" cy="15.6" r="3.5" stroke-width="2.8"/>
+    <circle cx="32.4" cy="15.6" r="3.5" stroke-width="2.8"/>
+  </g>
+</svg>

@@ -1,0 +1,65 @@
+{
+ "id": "70000001101160578",
+ "name": "Shtok Service",
+ "rating": 5,
+ "reviews_count": 45,
+ "address": "Братская улица, 24Б",
+ "district": "Сосновка ж/м, Октябрьский район, Улан-Удэ, 670042",
+ "hours": "Ежедневно с 09:00 до 19:00",
+ "phones": [
+  "+7 (924) 013-29-32",
+  "+7 (301) 258-88-88"
+ ],
+ "messengers": {},
+ "services": [],
+ "pricePhotos": [
+  "assets/price1.jpg",
+  "assets/price2.jpg"
+ ],
+ "photos": [
+  "assets/photo1.jpg",
+  "assets/photo2.jpg",
+  "assets/photo3.jpg"
+ ],
+ "reviews": [
+  {
+   "id": "311583743",
+   "name": "Oks Ah",
+   "date": "2026-10-30",
+   "text": "автоэлектрик Петр отличный мастер своего дела. Рекомендую.",
+   "rating": 5,
+   "url": "https://2gis.ru/ulanude/firm/70000001101160578/tab/reviews/review/311583743"
+  },
+  {
+   "id": "300599506",
+   "name": "yu ma",
+   "date": "2026-09-29",
+   "text": "приезжали менять свечи, поменяли быстро без каких либо проблем, очереди почти нет\nприезжайте, советую👍🏼",
+   "rating": 5,
+   "url": "https://2gis.ru/ulanude/firm/70000001101160578/tab/reviews/review/300599506"
+  },
+  {
+   "id": "258709714",
+   "name": "Вячеслав А",
+   "date": "2026-07-16",
+   "text": "Ребята молодцы! Прокачивал стойки на Ауди, все хорошо 👌",
+   "rating": 5,
+   "url": "https://2gis.ru/ulanude/firm/70000001101160578/tab/reviews/review/258709714"
+  },
+  {
+   "id": "263544889",
+   "name": "Алексей Байбородин",
+   "date": "2026-08-01",
+   "text": "Качество работ на отлично! Спасибо всем большое!",
+   "rating": 5,
+   "url": "https://2gis.ru/ulanude/firm/70000001101160578/tab/reviews/review/263544889"
+  }
+ ],
+ "detected_sites": [],
+ "logo": "",
+ "firmUrl": "https://2gis.ru/ulanude/firm/70000001101160578",
+ "cta": {
+  "label": "Позвонить",
+  "href": "tel:+79240132932"
+ }
+}

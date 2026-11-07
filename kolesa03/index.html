@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="ru" class="no-js">
+<head>
+<script>
+(function(){
+  var d = document.documentElement;
+  d.className = d.className.replace('no-js','js');
+  var stored = null;
+  try { stored = localStorage.getItem('k03:motion'); } catch(e){}
+  var reduce = false;
+  try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch(e){}
+  d.setAttribute('data-reduce', String(reduce));
+  if (stored !== '0'){ d.classList.add('motion','force-motion'); }
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title>Колёса 03 — шиномонтаж на Жердева, 8а, Улан-Удэ</title>
+<meta name="description" content="Шиномонтаж, шины и диски, изготовление ключей. Улан-Удэ, ул. Жердева, 8а. Ежедневно с 9:00 до 20:00. +7 902 166-14-66">
+<link rel="canonical" href="https://t9foon1337.github.io/landings-uu/kolesa03/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Колёса 03">
+<meta property="og:title" content="Колёса 03 — шиномонтаж на Жердева, 8а, Улан-Удэ">
+<meta property="og:description" content="Шиномонтаж, шины и диски, изготовление ключей. Ежедневно с 9:00 до 20:00. R13 — 1200 ₽.">
+<meta property="og:image" content="https://t9foon1337.github.io/landings-uu/kolesa03/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<style>
+  :root{
+    --bg:#0b0a09;
+    --surface:#131211;
+    --surface2:#1a1817;
+    --line:rgba(243,240,234,.09);
+    --line-strong:rgba(243,240,234,.16);
+    --fg:#f4f1ec;
+    --muted:#a9a29a;
+    --dim:#7b746c;
+    --brand:#ed1b24;
+    --brand-deep:#c1121a;
+    --radius:14px;
+    --ease:cubic-bezier(.2,.7,.2,1);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--bg);color:var(--fg);
+    font:400 16px/1.6 "GolosText",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  h1,h2,h3{font-family:"Unbounded","GolosText",sans-serif;margin:0;font-weight:600;line-height:1.14;letter-spacing:-.01em}
+  p{margin:0}
+  a{color:inherit}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+
+  /* ── header ───────────────────────────────── */
+  header{position:sticky;top:0;z-index:30;background:rgba(11,10,9,.72);backdrop-filter:blur(12px) saturate(140%);
+         border-bottom:1px solid transparent;transition:border-color .3s var(--ease),background-color .3s var(--ease)}
+  header.scrolled{border-bottom-color:var(--line);background:rgba(11,10,9,.94)}
+  .bar{display:flex;align-items:center;gap:28px;height:70px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .brand img{width:42px;height:42px;border-radius:50%;transition:transform .5s var(--ease)}
+  .brand:hover img{transform:rotate(-8deg) scale(1.04)}
+  .brand .name{font-family:"Unbounded",sans-serif;font-weight:600;font-size:17px;letter-spacing:-.02em;white-space:nowrap}
+  .brand .kind{display:block;font-family:"GolosText",sans-serif;font-weight:400;font-size:11px;color:var(--dim);letter-spacing:.06em;margin-top:2px}
+  nav{display:flex;gap:24px;margin-left:12px}
+  nav a{position:relative;color:var(--muted);text-decoration:none;font-size:14px;padding:6px 0;transition:color .2s}
+  nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--brand);transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease)}
+  nav a:hover{color:var(--fg)}
+  nav a:hover::after{transform:scaleX(1)}
+  .bar-right{margin-left:auto;display:flex;align-items:center;gap:16px}
+  .phone{text-decoration:none;font-size:15px;white-space:nowrap;color:var(--fg)}
+  .phone:hover{color:#fff}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:46px;padding:0 22px;border-radius:10px;
+       text-decoration:none;font:500 15px/1 "GolosText",sans-serif;border:1px solid transparent;cursor:pointer;
+       transition:background-color .18s,color .18s,border-color .18s,transform .18s var(--ease)}
+  .btn:active{transform:translateY(1px)}
+  .btn svg{width:16px;height:16px;flex:none}
+  .btn-primary{background:var(--brand);color:#fff}
+  .btn-primary:hover{background:var(--brand-deep)}
+  .btn-ghost{border-color:var(--line-strong);color:var(--fg);background:transparent}
+  .btn-ghost:hover{background:var(--surface2);border-color:rgba(243,240,234,.28)}
+  :focus-visible{outline:2px solid var(--brand);outline-offset:3px;border-radius:6px}
+
+  /* ── hero ─────────────────────────────────── */
+  .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);align-items:stretch}
+  .hero-inner{padding:92px 44px 76px max(24px,calc((100vw - 1120px)/2 + 24px));max-width:calc(560px + 18vw);align-self:center}
+  .hero-media{position:relative;overflow:hidden;min-height:580px}
+  .hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:56% 50%}
+  html.js.motion .hero-media img{animation:heroScale 18s var(--ease) both}
+  .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 0%,rgba(11,10,9,.86) 14%,rgba(11,10,9,0) 46%)}
+  @keyframes heroScale{from{transform:scale(1.06)}to{transform:scale(1)}}
+
+  .eyebrow{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;color:var(--muted);font-size:13px;margin-bottom:26px}
+  .eyebrow .live{display:inline-flex;align-items:center;gap:8px;color:var(--fg)}
+  .eyebrow .live i{width:7px;height:7px;border-radius:50%;background:var(--brand)}
+
+  h1{font-size:clamp(30px,3.5vw,46px);max-width:15ch}
+  h1 .accent{color:var(--brand);display:inline-block}
+  .lede{margin-top:22px;font-size:17px;line-height:1.62;color:var(--muted);max-width:44ch}
+  .lede strong{color:var(--fg);font-weight:500}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+  .facts{display:flex;flex-wrap:wrap;gap:8px 30px;margin-top:42px;padding-top:26px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+  .facts b{color:var(--fg);font-weight:500}
+
+  /* stagger on load */
+  html.js.motion .hero .rise{opacity:0;animation:rise .8s var(--ease) both}
+  html.js.motion .hero .rise:nth-child(1){animation-delay:.05s}
+  html.js.motion .hero .rise:nth-child(2){animation-delay:.13s}
+  html.js.motion .hero .rise:nth-child(3){animation-delay:.21s}
+  html.js.motion .hero .rise:nth-child(4){animation-delay:.3s}
+  html.js.motion .hero .rise:nth-child(5){animation-delay:.4s}
+  @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+  /* ── tread divider ────────────────────────── */
+  .tread{position:relative;height:1px;background:var(--line)}
+  .tread::before{content:"";position:absolute;left:0;top:-1px;width:112px;height:3px;background:var(--brand);
+                 transform-origin:left;transform:scaleX(0);transition:transform .9s var(--ease)}
+  .tread.in::before{transform:scaleX(1)}
+
+  /* ── reveal ───────────────────────────────── */
+  html.js.motion [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0s)}
+  html.js.motion [data-reveal].in{opacity:1;transform:none}
+  [data-reveal].in{opacity:1;transform:none}
+  .motion-toggle{background:none;border:0;padding:0;margin-top:18px;color:var(--dim);font:inherit;font-size:12px;
+                 text-decoration:underline;text-underline-offset:3px;cursor:pointer;transition:color .2s}
+  .motion-toggle:hover{color:var(--fg)}
+
+  section{padding:92px 0}
+  .head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:38px;flex-wrap:wrap}
+  h2{font-size:clamp(23px,2.5vw,32px)}
+  .head p{color:var(--muted);font-size:15px;max-width:46ch}
+
+  /* ── sizes ────────────────────────────────── */
+  .sizes{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+  .chip{height:42px;min-width:62px;padding:0 14px;border-radius:9px;border:1px solid var(--line-strong);background:transparent;
+        color:var(--muted);font:500 14px/1 "GolosText",sans-serif;font-variant-numeric:tabular-nums;cursor:pointer;
+        transition:background-color .18s,color .18s,border-color .18s,transform .18s var(--ease)}
+  .chip:hover{color:var(--fg);border-color:rgba(243,240,234,.3);transform:translateY(-1px)}
+  .chip[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:#fff}
+  .picked{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 22px;font-size:14px;color:var(--dim);min-height:22px}
+  .picked > span{white-space:nowrap}
+  .picked b{font-family:"Unbounded",sans-serif;font-weight:500;font-size:19px;color:var(--fg);font-variant-numeric:tabular-nums}
+  .picked i{font-style:normal;color:var(--brand);font-family:"Unbounded",sans-serif;font-weight:500;font-size:19px;font-variant-numeric:tabular-nums}
+
+  /* ── prices ───────────────────────────────── */
+  .table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);margin-top:26px}
+  .table-scroll::-webkit-scrollbar{height:8px}
+  .table-scroll::-webkit-scrollbar-thumb{background:rgba(243,240,234,.16);border-radius:8px}
+  table{border-collapse:separate;border-spacing:0;width:100%;min-width:780px;font-size:15px}
+  th,td{padding:14px 16px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--line);transition:background-color .2s,color .2s}
+  th:first-child,td:first-child{text-align:left;position:sticky;left:0;background:var(--surface);min-width:255px;z-index:1}
+  thead th{font-size:13px;font-weight:500;color:var(--dim);background:var(--surface2)}
+  thead th:first-child{background:var(--surface2)}
+  thead th.sel{color:var(--brand)}
+  tbody tr:last-child td{border-bottom:0}
+  tbody td:first-child{background:var(--surface)}
+  td.num{font-weight:500}
+  tbody tr:hover td{background:rgba(243,240,234,.035)}
+  tbody tr:hover td:first-child{background:#181614;color:var(--fg)}
+  td.sel{background:rgba(237,27,36,.09);color:#fff}
+  tbody tr:hover td.sel{background:rgba(237,27,36,.15)}
+  tr.hi td{background:rgba(237,27,36,.055)}
+  tr.hi td:first-child{box-shadow:inset 2px 0 0 var(--brand);background:#1d1213}
+  tr.hi td.num{color:#fff}
+  tr.hi td.sel{background:rgba(237,27,36,.16);color:#fff}
+  .note{margin-top:18px;font-size:14px;color:var(--dim)}
+  .note span{color:var(--muted)}
+  .scroll-hint{display:none;margin-top:12px;font-size:12px;color:var(--dim)}
+
+  .small-works{margin-top:34px;display:grid;grid-template-columns:repeat(auto-fit,minmax(228px,1fr));gap:1px;background:var(--line);
+               border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .small-works div{background:var(--surface);padding:15px 18px;min-height:52px;align-items:center;display:flex;justify-content:space-between;gap:16px;font-size:14px;
+                   color:var(--muted);transition:background-color .2s,color .2s}
+  .small-works div:hover{background:var(--surface2);color:var(--fg)}
+  .small-works b{color:var(--fg);font-weight:500;font-variant-numeric:tabular-nums}
+
+  /* ── services ─────────────────────────────── */
+  .services{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
+  .list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+  .list li{display:grid;grid-template-columns:34px 1fr auto;gap:16px;padding:24px 0;border-bottom:1px solid var(--line);align-items:baseline}
+  .list .idx{font-size:12px;color:var(--dim);font-variant-numeric:tabular-nums;padding-top:4px}
+  .list h3{font-size:16px;line-height:1.3}
+  .list p{grid-column:2;color:var(--muted);font-size:14px;margin-top:8px;max-width:42ch}
+  .list .price{font-size:13px;color:var(--dim);font-variant-numeric:tabular-nums;white-space:nowrap;border:1px solid var(--line);
+               border-radius:7px;padding:5px 9px}
+  .shot{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:var(--surface);margin:0}
+  .shot img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .8s var(--ease)}
+  .shot:hover img{transform:scale(1.03)}
+  .shot figcaption{padding:13px 16px;font-size:12px;color:var(--dim);border-top:1px solid var(--line)}
+
+  /* ── reviews ──────────────────────────────── */
+  .reviews{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .score{display:flex;align-items:flex-start;gap:18px;flex-wrap:wrap;margin-top:0}
+  .score .big{font-family:"Unbounded",sans-serif;font-size:52px;line-height:1;font-weight:600;letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:#fff}
+  .score .meta{font-size:14px;color:var(--muted);line-height:1.7;padding-top:4px}
+  .score .meta a{color:var(--muted);text-underline-offset:3px;text-decoration-color:rgba(243,240,234,.3)}
+  .score .meta a:hover{color:#fff}
+  .quotes{margin-top:36px;display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  a.quote{margin:0;background:var(--surface2);border:1px solid var(--line);border-radius:var(--radius);padding:26px;
+          display:flex;flex-direction:column;gap:18px;text-decoration:none;color:inherit;
+          transition:border-color .25s,transform .25s var(--ease),background-color .25s}
+  a.quote:hover{border-color:rgba(237,27,36,.45);background:#1f1c1a;transform:translateY(-2px)}
+  a.quote:active{transform:translateY(0)}
+  a.quote p{font-size:15px;line-height:1.6}
+  a.quote footer{margin-top:auto;font-size:13px;color:var(--dim);display:flex;align-items:flex-end;justify-content:space-between;gap:14px}
+  a.quote footer b{display:block;font-family:"Unbounded",sans-serif;font-weight:500;font-size:13px;color:var(--fg);margin-bottom:3px}
+  a.quote .go{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--dim);white-space:nowrap;
+              transition:color .2s,transform .2s var(--ease)}
+  a.quote .go svg{width:13px;height:13px}
+  a.quote:hover .go{color:var(--brand);transform:translate(1px,-1px)}
+
+  .btn-all{display:inline-flex;align-items:center;gap:10px;height:54px;padding:0 28px;border-radius:11px;
+           border:1px solid rgba(237,27,36,.72);background:rgba(237,27,36,.16);color:#fff;text-decoration:none;
+           font:500 15.5px/1 "GolosText",sans-serif;white-space:nowrap;box-shadow:0 6px 24px -14px rgba(237,27,36,.9);
+           transition:background-color .2s,border-color .2s,transform .2s var(--ease)}
+  .btn-all:hover{background:var(--brand);border-color:var(--brand);transform:translateY(-1px)}
+  .btn-all svg{width:16px;height:16px}
+  .head .hint{color:var(--dim);font-size:14px;margin-top:10px;max-width:40ch}
+
+  /* ── place ────────────────────────────────── */
+  .place{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .addr{list-style:none;padding:0;margin:26px 0 0;border-top:1px solid var(--line)}
+  .addr li{padding:17px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;font-size:15px}
+  .addr li span{color:var(--dim);font-size:14px;text-align:right}
+  .open{display:inline-flex;align-items:center;gap:9px;font-size:13px;color:var(--muted);margin-top:26px}
+  .open .dot{width:7px;height:7px;border-radius:50%;background:var(--brand)}
+  .place .cta{margin-top:26px}
+
+  footer.site{padding:44px 0 120px;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
+  footer.site .row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+  footer.site a{color:var(--muted);text-decoration:none}
+  footer.site a:hover{color:var(--fg)}
+  footer .flogo{display:flex;align-items:center;gap:10px}
+  footer .flogo img{width:26px;height:26px;border-radius:50%;opacity:.9}
+  .disclaimer{margin-top:22px;font-size:12px;color:#5e584f;max-width:72ch}
+
+  /* ── mobile call bar ──────────────────────── */
+  .callbar{display:none}
+
+  @media (max-width:900px){
+    nav{display:none}
+    .services,.place{grid-template-columns:1fr;gap:34px}
+    .quotes{grid-template-columns:1fr}
+    section{padding:68px 0}
+    .hero-inner{padding:72px 32px 60px}
+  }
+  @media (max-width:640px){
+    .bar{height:62px;gap:12px}
+    .brand img{width:34px;height:34px}
+    .brand .name{font-size:15px}
+    .brand .kind{display:none}
+    .phone{display:none}
+    .btn{height:42px;padding:0 18px;font-size:14px}
+    .hero{grid-template-columns:1fr}
+    .hero-inner{padding:44px 20px 40px;max-width:none}
+    .hero-media{min-height:250px;order:-1}
+    .hero-media::after{background:linear-gradient(0deg,rgba(11,10,9,.92) 0%,rgba(11,10,9,0) 46%)}
+    .lede{font-size:16px}
+    .facts{gap:6px 20px;margin-top:32px}
+    h1{max-width:none}
+    .head{margin-bottom:26px}
+    th,td{padding:12px;font-size:14px}
+    th:first-child,td:first-child{min-width:196px}
+    .small-works div{padding:13px 16px}
+    .scroll-hint{display:block}
+    .list li{grid-template-columns:26px 1fr}
+    .list .price{grid-column:2;order:4;justify-self:start;margin-top:12px}
+    .list p{grid-column:2;order:3;margin-top:10px}
+    .chip{height:40px;min-width:56px;padding:0 12px}
+    footer.site{padding-bottom:96px}
+    .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;gap:10px;padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+             background:rgba(11,10,9,.94);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+    .callbar .btn{flex:1;white-space:nowrap;padding:0 14px;font-size:14px}
+    .callbar .btn-primary{flex:1.35}
+    .score{gap:12px}
+    .score .big{font-size:44px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html:not(.force-motion) .hero-media img{animation:none;transform:none}
+    html:not(.force-motion) .rise{animation:none !important;opacity:1 !important}
+    html:not(.force-motion) [data-reveal]{transform:none !important;transition:opacity .2s linear}
+    html:not(.force-motion) .tread::before{transform:none}
+    html:not(.force-motion){scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap bar">
+    <a class="brand" href="#top">
+      <img src="assets/logo.png" alt="Логотип «Колёса 03»">
+      <span>
+        <span class="name">колёса 03</span>
+        <span class="kind">шиномонтаж · Жердева, 8а</span>
+      </span>
+    </a>
+    <nav>
+      <a href="#prices">Цены</a>
+      <a href="#services">Услуги</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#place">Адрес</a>
+    </nav>
+    <div class="bar-right">
+      <a class="phone num" href="tel:+79021661466">+7 902 166-14-66</a>
+      <a class="btn btn-primary" href="https://max.ru/u/f9LHodD0cOLhJ-iznWzfC_mwUZVIa4U2bbMVQYE99Hmha8rrm7A8-_ggTFE" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.5-.7L3 21l1.8-4.6A8.4 8.4 0 0 1 12 3.1a8.4 8.4 0 0 1 9 8.4Z"/></svg><span>Написать в MAX</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="hero-inner">
+    <div class="eyebrow rise">
+      <span class="live"><i></i>Ежедневно с 9:00 до 20:00</span>
+      <span>Улан-Удэ, Жердева, 8а</span>
+    </div>
+    <h1 class="rise">Шиномонтаж<br><span class="accent">Жердева, 8а</span></h1>
+    <p class="lede rise">Три точки на одном пятачке: шиномонтаж, магазин шин и дисков, изготовление ключей. Шиномонтаж R13 — <strong>1200 ₽</strong>, дальше по прайсу.</p>
+    <div class="cta rise">
+      <a class="btn btn-primary" href="https://max.ru/u/f9LHodD0cOLhJ-iznWzfC_mwUZVIa4U2bbMVQYE99Hmha8rrm7A8-_ggTFE" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.5-.7L3 21l1.8-4.6A8.4 8.4 0 0 1 12 3.1a8.4 8.4 0 0 1 9 8.4Z"/></svg><span>Написать в MAX</span></a>
+      <a class="btn btn-ghost" href="https://2gis.ru/ulanude/firm/70000001109624187" target="_blank" rel="noopener">Маршрут в 2ГИС</a>
+    </div>
+    <div class="facts num rise">
+      <span><b>4,9</b> из 5 в 2ГИС</span>
+      <span><b>55</b> оценок · 29 отзывов</span>
+      <span><b>3</b> точки на Жердева, 8а</span>
+    </div>
+  </div>
+  <div class="hero-media">
+    <img src="assets/hero.jpg" alt="Шиномонтаж «Колёса 03» на Жердева, 8а вечером: два мастера меняют колесо">
+  </div>
+</div>
+
+<div class="tread" id="tread" aria-hidden="true"></div>
+
+<section id="prices">
+  <div class="wrap">
+    <div class="head" data-reveal>
+      <h2>Цены</h2>
+      <p>Выберите радиус — покажем цену на вашу машину. Полный прайс по всем размерам в таблице.</p>
+    </div>
+
+    <div class="sizes" data-reveal role="group" aria-label="Выбор радиуса колеса">
+      <button class="chip" type="button" data-r="13">R13</button>
+      <button class="chip" type="button" data-r="14">R14</button>
+      <button class="chip" type="button" data-r="15">R15</button>
+      <button class="chip" type="button" data-r="16">R16</button>
+      <button class="chip" type="button" data-r="17">R17</button>
+      <button class="chip" type="button" data-r="18">R18</button>
+      <button class="chip" type="button" data-r="19">R19</button>
+      <button class="chip" type="button" data-r="20">R20</button>
+    </div>
+    <p class="picked num" data-reveal aria-live="polite">
+      <span>Выбрано <b id="pickR">R16</b></span>
+      <span>без снятия — <i id="pickA">1600 ₽</i></span>
+      <span>со снятием — <i id="pickB">2200 ₽</i></span>
+    </p>
+
+    <div class="table-scroll" data-reveal>
+      <table class="num">
+        <thead>
+          <tr>
+            <th scope="col">Вид работ, ₽</th>
+            <th scope="col" data-r="13">R13</th><th scope="col" data-r="14">R14</th><th scope="col" data-r="15">R15</th><th scope="col" data-r="16">R16</th>
+            <th scope="col" data-r="17">R17</th><th scope="col" data-r="18">R18</th><th scope="col" data-r="19">R19</th><th scope="col" data-r="20">R20</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Снятие / установка с авто</td>
+            <td data-r="13">150</td><td data-r="14">150</td><td data-r="15">200</td><td data-r="16">200</td><td data-r="17">200</td><td data-r="18">250</td><td data-r="19">275</td><td data-r="20">275</td>
+          </tr>
+          <tr>
+            <td>Демонтаж / монтаж</td>
+            <td data-r="13">150</td><td data-r="14">150</td><td data-r="15">150</td><td data-r="16">200</td><td data-r="17">200</td><td data-r="18">250</td><td data-r="19">275</td><td data-r="20">275</td>
+          </tr>
+          <tr>
+            <td>Балансировка</td>
+            <td data-r="13">150</td><td data-r="14">150</td><td data-r="15">150</td><td data-r="16">200</td><td data-r="17">200</td><td data-r="18">250</td><td data-r="19">275</td><td data-r="20">275</td>
+          </tr>
+          <tr class="hi">
+            <td>Шиномонтаж без снятия колёс</td>
+            <td data-r="13">1200</td><td data-r="14">1200</td><td data-r="15">1200</td><td data-r="16">1600</td><td data-r="17">1600</td><td data-r="18">2000</td><td data-r="19">2200</td><td data-r="20">2200</td>
+          </tr>
+          <tr>
+            <td>Шиномонтаж со снятием колёс</td>
+            <td data-r="13">1800</td><td data-r="14">1800</td><td data-r="15">2000</td><td data-r="16">2200</td><td data-r="17">2400</td><td data-r="18">2600</td><td data-r="19">2800</td><td data-r="20">3200</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="scroll-hint">Таблица листается вправо: R14–R20</p>
+    <p class="note">Внедорожники, микроавтобусы и лёгкие грузовики — <span>звоните, цену назовём по телефону.</span></p>
+
+    <div class="small-works" data-reveal>
+      <div><span>Универсальная латка</span><b>200</b></div>
+      <div><span>Установка жгута</span><b>200</b></div>
+      <div><span>Замена вентиля</span><b>100</b></div>
+      <div><span>Осмотр колеса</span><b>100</b></div>
+      <div><span>Обработка посадочного места</span><b>100</b></div>
+      <div><span>Герметизация борта</span><b>100</b></div>
+      <div><span>Проверка дисбаланса</span><b>от 50</b></div>
+      <div><span>Подкачка колеса</span><b>20</b></div>
+      <div><span>Аренда домкрата, 10 мин</span><b>100</b></div>
+      <div><span>Продувка радиатора</span><b>от 100</b></div>
+      <div><span>Камера R14</span><b>800</b></div>
+      <div><span>Камера R15</span><b>900</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap services">
+    <div>
+      <div class="head" style="margin-bottom:10px" data-reveal>
+        <h2>Что делаем</h2>
+        <p>Один заезд — колёса, ключи и мойка рядом.</p>
+      </div>
+      <ul class="list">
+        <li data-reveal style="--d:.05s">
+          <span class="idx">01</span>
+          <h3>Шиномонтаж R13–R22</h3>
+          <span class="price">от 1200 ₽</span>
+          <p>Снятие, монтаж, балансировка, ремонт проколов и порезов. Работаем с литьём и штамповкой.</p>
+        </li>
+        <li data-reveal style="--d:.1s">
+          <span class="idx">02</span>
+          <h3>Шины и диски</h3>
+          <span class="price">8а ст10</span>
+          <p>Соседняя точка: подбор и продажа шин и дисков, поможем с выбором под размер и бюджет.</p>
+        </li>
+        <li data-reveal style="--d:.15s">
+          <span class="idx">03</span>
+          <h3>Изготовление ключей</h3>
+          <span class="price">8а/6</span>
+          <p>Ключи по образцу, включая чипованные автомобильные. Заточка ножей.</p>
+        </li>
+        <li data-reveal style="--d:.2s">
+          <span class="idx">04</span>
+          <h3>Автомойка</h3>
+          <span class="price">8а/5</span>
+          <p>Открывается в ноябре на этом же пятачке — можно помыть машину, пока меняют колёса.</p>
+        </li>
+      </ul>
+    </div>
+    <figure class="shot" data-reveal style="--d:.15s">
+      <img src="assets/keys.jpg" alt="Станок для изготовления ключей и стенд с заготовками в «Колёса 03»">
+      <figcaption>Изготовление ключей — на Жердева, 8а/6</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="reviews" class="reviews">
+  <div class="wrap">
+    <div class="head" data-reveal style="align-items:center">
+      <div>
+        <h2>Отзывы</h2>
+        <p class="hint">Из карточки 2ГИС, без правок. Открывается оригинал отзыва.</p>
+      </div>
+      <a class="btn-all" href="https://2gis.ru/ulanude/firm/70000001109624187/tab/reviews" target="_blank" rel="noopener">
+        Все 29 отзывов в 2ГИС
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </div>
+    <div class="score num" data-reveal>
+      <span class="big">4,9</span>
+      <span class="meta">средняя оценка<br>55 оценок · 29 отзывов</span>
+    </div>
+
+    <div class="quotes">
+      <a class="quote" data-reveal style="--d:.05s" href="https://2gis.ru/ulanude/firm/70000001109624187/tab/reviews/review/217060849" target="_blank" rel="noopener">
+        <p>«Попал на саморез, быстро залатали и поехал. Цены приемлемые, работают честно»</p>
+        <footer><span><b>Николай Митапов</b>5 февраля 2026</span><span class="go">2ГИС<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></footer>
+      </a>
+      <a class="quote" data-reveal style="--d:.1s" href="https://2gis.ru/ulanude/firm/70000001109624187/tab/reviews/review/307239490" target="_blank" rel="noopener">
+        <p>«Быстро, недорого. Доволен работой Виктора. Спасибо»</p>
+        <footer><span><b>Сергей Базаров</b>18 октября 2026</span><span class="go">2ГИС<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></footer>
+      </a>
+      <a class="quote" data-reveal style="--d:.15s" href="https://2gis.ru/ulanude/firm/70000001109624187/tab/reviews/review/304023695" target="_blank" rel="noopener">
+        <p>«Быстро поменяли шины, нашли прокол в шине и сразу залатали»</p>
+        <footer><span><b>Огдо Ботулу</b>8 октября 2026</span><span class="go">2ГИС<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></footer>
+      </a>
+      <a class="quote" data-reveal style="--d:.2s" href="https://2gis.ru/ulanude/firm/70000001109624187/tab/reviews/review/242626567" target="_blank" rel="noopener">
+        <p>«Удобное расположение, заехали по дороге в магазины. С утра было свободно, сделали быстро все шины по кругу. Внутри и снаружи чисто и аккуратно, большая парковка места много»</p>
+        <footer><span><b>Жамсуев</b>15 мая 2026</span><span class="go">2ГИС<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></footer>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="place">
+  <div class="wrap place">
+    <div data-reveal>
+      <h2>Адрес</h2>
+      <ul class="addr">
+        <li><b>Жердева, 8а/6</b><span>шиномонтаж</span></li>
+        <li><b>Жердева, 8а ст10</b><span>шины и диски</span></li>
+        <li><b>Жердева, 8а/5</b><span>автомойка, открывается в ноябре</span></li>
+      </ul>
+      <p style="margin-top:26px;color:var(--muted);font-size:15px">Октябрьский район, 1 этаж. Ориентир — магазин СМИТ, 200 метров. Стоянка перед боксами, заезд с улицы Жердева.</p>
+      <div class="open"><span class="dot"></span>Ежедневно с 9:00 до 20:00, без выходных</div>
+      <p style="margin-top:12px;font-size:14px"><a href="tel:+79021661466" class="num" style="color:var(--muted);text-decoration:none">+7 902 166-14-66</a></p>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://max.ru/u/f9LHodD0cOLhJ-iznWzfC_mwUZVIa4U2bbMVQYE99Hmha8rrm7A8-_ggTFE" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.5-.7L3 21l1.8-4.6A8.4 8.4 0 0 1 12 3.1a8.4 8.4 0 0 1 9 8.4Z"/></svg><span>Написать в MAX</span></a>
+        <a class="btn btn-ghost" href="https://2gis.ru/ulanude/firm/70000001109624187" target="_blank" rel="noopener">Открыть в 2ГИС</a>
+      </div>
+    </div>
+    <figure class="shot" data-reveal style="--d:.1s">
+      <img src="assets/exterior.jpg" alt="Площадка «Колёса 03» на Жердева, 8а: бокс шиномонтажа и автомойка">
+      <figcaption>Жердева, 8а: шиномонтаж и автомойка на одной площадке</figcaption>
+    </figure>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="row">
+      <div class="flogo">
+        <img src="assets/logo.png" alt="">
+        <span>колёса 03 · Улан-Удэ, ул. Жердева, 8а · <a href="tel:+79021661466" class="num">+7 902 166-14-66</a></span>
+      </div>
+      <div><a href="https://2gis.ru/ulanude/firm/70000001109624187" target="_blank" rel="noopener">Карточка в 2ГИС</a></div>
+    </div>
+    <button class="motion-toggle" id="motionBtn" type="button" hidden>Показать анимации</button>
+    <p class="disclaimer">Страница-образец: цены, отзывы и фотографии взяты из карточки организации в 2ГИС. Не является официальным сайтом компании.</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-primary" href="https://max.ru/u/f9LHodD0cOLhJ-iznWzfC_mwUZVIa4U2bbMVQYE99Hmha8rrm7A8-_ggTFE" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.5-.7L3 21l1.8-4.6A8.4 8.4 0 0 1 12 3.1a8.4 8.4 0 0 1 9 8.4Z"/></svg><span>Написать в MAX</span></a>
+  <a class="btn btn-ghost" href="https://2gis.ru/ulanude/firm/70000001109624187" target="_blank" rel="noopener">Маршрут</a>
+</div>
+
+<script>
+(function(){
+  var doc = document.documentElement;
+  var reduceMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var enabled = doc.classList.contains('motion');
+
+  function hasMotion(){ return doc.classList.contains('motion'); }
+
+  /* header state */
+  var hdr = document.getElementById('hdr');
+  var onScroll = function(){ hdr.classList.toggle('scrolled', window.scrollY > 6); };
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  /* reveal */
+  var io = null;
+  function initReveals(){
+    var els = [].slice.call(document.querySelectorAll('[data-reveal]'));
+    els.forEach(function(el){ el.classList.remove('in'); });
+    if (io){ io.disconnect(); io = null; }
+    if (!('IntersectionObserver' in window) || !hasMotion()){
+      els.forEach(function(el){ el.classList.add('in'); });
+      return;
+    }
+    void document.body.offsetWidth;
+    io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {rootMargin:'0px 0px -12% 0px', threshold:.12});
+    els.forEach(function(el){ io.observe(el); });
+  }
+
+  var tread = document.getElementById('tread');
+  function initTread(){
+    tread.classList.remove('in');
+    if (!('IntersectionObserver' in window) || !hasMotion()){ tread.classList.add('in'); return; }
+    void tread.offsetWidth;
+    new IntersectionObserver(function(en, obs){
+      if (en[0].isIntersecting){ tread.classList.add('in'); obs.disconnect(); }
+    }, {threshold:.5}).observe(tread);
+  }
+
+  function restartHero(){
+    doc.classList.remove('motion');
+    void document.body.offsetWidth;
+    doc.classList.add('motion');
+  }
+
+  /* цена по радиусу — данные из таблицы */
+  var chips = document.querySelectorAll('.chip');
+  var pickR = document.getElementById('pickR');
+  var pickA = document.getElementById('pickA');
+  var pickB = document.getElementById('pickB');
+  var priceA = {}, priceB = {};
+  document.querySelectorAll('tr.hi td[data-r]').forEach(function(td){ priceA[td.dataset.r] = +td.textContent; });
+  var lastRow = document.querySelectorAll('tbody tr')[4];
+  lastRow.querySelectorAll('td[data-r]').forEach(function(td){ priceB[td.dataset.r] = +td.textContent; });
+
+  function tween(el, to){
+    if (!hasMotion()){ el.textContent = to + ' ₽'; return; }
+    var from = parseInt(el.textContent, 10) || 0;
+    var t0 = performance.now(), dur = 320;
+    cancelAnimationFrame(el._raf);
+    (function step(t){
+      var k = Math.min(1, (t - t0) / dur);
+      var e = 1 - Math.pow(1 - k, 3);
+      el.textContent = Math.round(from + (to - from) * e) + ' ₽';
+      if (k < 1) el._raf = requestAnimationFrame(step);
+    })(t0);
+  }
+
+  var tableWrap = document.querySelector('.table-scroll');
+  function centerColumn(r, instant){
+    if (!tableWrap || tableWrap.scrollWidth <= tableWrap.clientWidth + 4) return;
+    var cell = tableWrap.querySelector('thead th[data-r="' + r + '"]');
+    if (!cell) return;
+    var cr = tableWrap.getBoundingClientRect(), x = cell.getBoundingClientRect();
+    var sticky = document.querySelector('tbody td:first-child').getBoundingClientRect().width;
+    var visible = cr.width - sticky;
+    var rel = (x.left - cr.left) + tableWrap.scrollLeft;
+    var target = rel - sticky - Math.max(0, (visible - x.width) / 2);
+    tableWrap.scrollTo({left: Math.max(0, target), behavior: (instant || !hasMotion()) ? 'auto' : 'smooth'});
+  }
+
+  function select(r, fromUser){
+    chips.forEach(function(c){ c.setAttribute('aria-pressed', String(c.dataset.r === r)); });
+    if (fromUser) centerColumn(r);
+    document.querySelectorAll('[data-r]').forEach(function(cell){
+      cell.classList.toggle('sel', cell.dataset.r === r && cell.tagName !== 'BUTTON');
+    });
+    pickR.textContent = 'R' + r;
+    tween(pickA, priceA[r]);
+    tween(pickB, priceB[r]);
+  }
+
+  /* переключатель анимаций для систем с выключенными эффектами */
+  var motionBtn = document.getElementById('motionBtn');
+  function syncToggle(){
+    if (!motionBtn) return;
+    motionBtn.hidden = !reduceMQ.matches;
+    motionBtn.textContent = enabled ? 'Выключить анимации' : 'Показать анимации';
+    motionBtn.setAttribute('aria-pressed', String(enabled));
+  }
+  if (motionBtn){
+    motionBtn.addEventListener('click', function(){
+      enabled = !enabled;
+      try { localStorage.setItem('k03:motion', enabled ? '1' : '0'); } catch(e){}
+      doc.classList.toggle('force-motion', enabled);
+      if (enabled){ restartHero(); } else { doc.classList.remove('motion'); }
+      initReveals(); initTread(); syncToggle();
+    });
+  }
+  if (reduceMQ.addEventListener) reduceMQ.addEventListener('change', syncToggle);
+
+  chips.forEach(function(c){ c.addEventListener('click', function(){ select(c.dataset.r, true); }); });
+  select('16', false);
+  centerColumn('16', true);
+  initReveals(); initTread(); syncToggle();
+})();
+</script>
+
+</body>
+</html>

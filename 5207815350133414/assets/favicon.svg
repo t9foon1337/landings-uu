@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Мотом">
+  <rect width="64" height="64" fill="#EFEDE7"/>
+  <rect x="3" y="3" width="58" height="58" fill="#FAF8F3" stroke="#A63E14" stroke-width="3"/>
+  <path d="M16 47V18l16 17 16-17v29" fill="none" stroke="#17181A" stroke-width="6" stroke-linejoin="miter" stroke-linecap="square"/>
+</svg>

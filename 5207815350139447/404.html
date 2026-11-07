@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Страница не найдена — Правка дисков 03</title>
+<meta name="description" content="Такой страницы нет. Вернитесь на главную страницу мастерской «Правка дисков 03», улица Революции 1905 года, 13а, Улан-Удэ.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/fonts/plexsans.css">
+<link rel="stylesheet" href="assets/fonts/plexmono.css">
+<style>
+  :root{
+    --paper:#f4f3ec; --plate:#fffefa; --ink:#12306b; --ink-deep:#0b2149;
+    --muted:#55627a; --line:#c3ccd8; --red:#b0342a;
+    --grid:rgba(18,48,107,.05); --grid-major:rgba(18,48,107,.1);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  body{
+    margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;
+    font-family:"IBM Plex Sans",system-ui,sans-serif;color:var(--ink-deep);
+    background-color:var(--paper);
+    background-image:
+      linear-gradient(to right,var(--grid) 1px,transparent 1px),
+      linear-gradient(to bottom,var(--grid) 1px,transparent 1px),
+      linear-gradient(to right,var(--grid-major) 1px,transparent 1px),
+      linear-gradient(to bottom,var(--grid-major) 1px,transparent 1px);
+    background-size:8px 8px,8px 8px,40px 40px,40px 40px;
+  }
+  .sheet{
+    width:100%;max-width:560px;background:var(--plate);
+    border:1px solid var(--ink);padding:40px 32px;
+  }
+  .stamp{
+    display:flex;justify-content:space-between;gap:12px;
+    font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--muted);
+    border-bottom:1px solid var(--line);padding-bottom:10px;
+  }
+  h1{
+    font-family:"IBM Plex Mono",monospace;font-size:clamp(4.5rem,16vw,7rem);
+    line-height:.95;margin:28px 0 0;letter-spacing:-.04em;color:var(--ink);font-weight:600;
+  }
+  .dim{position:relative;height:14px;margin:18px 0 0;border-bottom:2px solid var(--red)}
+  .dim::before,.dim::after{content:"";position:absolute;bottom:-6px;width:2px;height:12px;background:var(--red)}
+  .dim::before{left:0}
+  .dim::after{right:0}
+  p{margin:22px 0 0;font-size:1.02rem;max-width:38ch;line-height:1.6}
+  .row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;min-height:48px;
+    padding:0 22px;font-weight:600;font-size:1rem;text-decoration:none;
+    border:1px solid var(--ink);border-radius:2px;background:var(--ink);color:var(--plate);
+  }
+  .btn:hover{background:var(--ink-deep);border-color:var(--ink-deep)}
+  .btn-quiet{background:transparent;color:var(--ink);font-family:"IBM Plex Mono",monospace;font-weight:400}
+  .btn-quiet:hover{background:var(--ink);color:var(--plate)}
+  :focus-visible{outline:3px solid var(--red);outline-offset:3px}
+  .foot{
+    margin-top:32px;padding-top:14px;border-top:1px solid var(--line);
+    font-family:"IBM Plex Mono",monospace;font-size:.74rem;color:var(--muted);letter-spacing:.04em;
+  }
+</style>
+</head>
+<body>
+<main class="sheet">
+  <div class="stamp"><span>Правка дисков 03</span><span>Лист не найден</span></div>
+  <h1>404</h1>
+  <div class="dim" aria-hidden="true"></div>
+  <p>Такой страницы нет — размер не сошёлся. Вернитесь к работам и ценам или позвоните в мастерскую.</p>
+  <div class="row">
+    <a class="btn" href="index.html">На главную</a>
+    <a class="btn btn-quiet" href="tel:+73012464588">+7 (301) 246-45-88</a>
+  </div>
+  <p class="foot">Улан-Удэ, улица Революции 1905 года, 13а<br>Ежедневно с 08:30 до 20:00</p>
+</main>
+</body>
+</html>

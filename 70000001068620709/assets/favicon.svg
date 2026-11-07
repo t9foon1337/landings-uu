@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Колесо плюс">
+  <rect width="64" height="64" fill="#f5f0e2"/>
+  <circle cx="32" cy="32" r="27.5" fill="none" stroke="#17130f" stroke-width="3.4" stroke-dasharray="3 6.6"/>
+  <circle cx="32" cy="32" r="20.5" fill="none" stroke="#17130f" stroke-width="8"/>
+  <path d="M32 23v18M23 32h18" stroke="#a51c14" stroke-width="6.6"/>
+</svg>

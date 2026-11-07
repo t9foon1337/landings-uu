@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Garage masters — автосервис на Бабушкина, 206 к1, Улан-Удэ</title>
+<meta name="description" content="Ремонт ходовой части, пневмоподвески и стоек, замена масла, шиномонтаж, шины и диски, выкуп б/у автошин. Улица Бабушкина, 206 к1. Ежедневно с 09:00 до 19:00. +7 (301) 230-05-50.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Garage masters">
+<meta property="og:title" content="Garage masters — автосервис на Бабушкина, 206 к1">
+<meta property="og:description" content="Ходовая часть, пневмоподвеска, стойки, масло, шины и шиномонтаж. Ежедневно с 09:00 до 19:00.">
+<meta property="og:image" content="https://t9foon1337.github.io/landings-uu/70000001062658375/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<style>
+  :root{
+    --cast:#0f0c0a;
+    --iron:#161210;
+    --panel:#1d1815;
+    --line:#3a2e23;
+    --line-soft:#2a2119;
+    --ink:#f3ebe0;
+    --dim:#bfae99;
+    --brass:#d9a744;
+    --brass-dim:#9b7a2e;
+    --shadow:none;
+    --radius:3px;
+    --wrap:1160px;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--cast);
+    color:var(--ink);
+    font-family:'GolosText','Segoe UI',system-ui,sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    font-weight:400;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  h1,h2,h3{font-family:'Unbounded','GolosText',system-ui,sans-serif;font-weight:700;margin:0;letter-spacing:-.02em}
+  h1{font-size:clamp(26px,3.15vw,40px);line-height:1.12}
+  h2{font-size:clamp(22px,2.5vw,31px);line-height:1.15}
+  p{margin:0}
+  ul,ol{margin:0;padding:0;list-style:none}
+  .wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 clamp(18px,4vw,32px)}
+  .num{font-family:'Unbounded',system-ui,sans-serif;font-variant-numeric:tabular-nums}
+
+  /* ── кнопки ───────────────────────────────────────────── */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    min-height:50px;padding:0 24px;
+    font:600 16px/1 'GolosText',system-ui,sans-serif;
+    text-decoration:none;border-radius:var(--radius);
+    border:1px solid transparent;cursor:pointer;
+    transition:background-color .15s ease,border-color .15s ease,color .15s ease,transform .08s ease;
+  }
+  .btn-solid{background:var(--brass);color:#17120c;border-color:var(--brass)}
+  .btn-solid:hover{background:#e9bb60;border-color:#e9bb60}
+  .btn-solid:active{background:#c6952f;border-color:#c6952f;transform:translateY(1px)}
+  .btn-quiet{
+    display:inline-flex;align-items:center;min-height:44px;
+    color:var(--brass);text-decoration:none;
+    border-bottom:1px solid var(--brass-dim);padding-bottom:2px;
+  }
+  .btn-quiet:hover{color:#f0cf8d;border-bottom-color:var(--brass)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+  .ico{width:17px;height:17px;flex:none;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+  /* ── шапка ────────────────────────────────────────────── */
+  .top{
+    border-bottom:1px solid var(--line-soft);
+    background:var(--cast);
+    position:relative;z-index:5;
+  }
+  .top-in{display:flex;align-items:center;gap:clamp(14px,3vw,36px);min-height:74px;padding-top:10px;padding-bottom:10px}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none;margin-right:auto}
+  .brand svg{width:26px;height:26px;color:var(--brass);flex:none}
+  .brand b{font-family:'Unbounded',system-ui,sans-serif;font-weight:600;font-size:15px;letter-spacing:-.01em}
+  .top nav{display:flex;gap:26px}
+  .top nav a{
+    font-size:15px;color:var(--dim);text-decoration:none;padding:12px 0;
+    border-bottom:1px solid transparent;
+  }
+  .top nav a:hover{color:var(--ink);border-bottom-color:var(--brass-dim)}
+  .top-tel{font-size:16px;text-decoration:none;color:var(--ink);white-space:nowrap;min-height:44px;display:inline-flex;align-items:center}
+  .top-tel:hover{color:var(--brass)}
+
+  /* ── первый экран ─────────────────────────────────────── */
+  .hero{padding:clamp(34px,5vw,62px) 0 clamp(30px,4vw,48px)}
+  .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:clamp(26px,4vw,54px);align-items:start}
+  .eyebrow{
+    display:flex;align-items:center;gap:10px;
+    font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);
+    margin-bottom:18px;
+  }
+  .eyebrow::before{
+    content:"";width:30px;height:11px;flex:none;
+    background-image:radial-gradient(circle at 2px 5px,var(--brass-dim) 1.6px,transparent 1.9px);
+    background-size:7px 10px;background-repeat:repeat-x;
+  }
+  .lede{margin-top:22px;max-width:44ch;color:#ded3c4;font-size:17px}
+  .facts{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:26px;font-size:15px;color:var(--dim)}
+  .facts b{color:var(--ink);font-weight:600}
+  .hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;margin-top:28px}
+
+  figure{margin:0}
+  .shot img{width:100%;height:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}
+  .shot{position:relative}
+  .shot figcaption{
+    display:flex;gap:10px;margin-top:12px;padding-top:11px;
+    border-top:1px solid var(--line-soft);
+    font-size:13px;line-height:1.45;color:var(--dim);
+  }
+  .shot figcaption::before{
+    content:"";flex:none;width:8px;height:8px;margin-top:6px;border-radius:50%;
+    background:var(--brass-dim);
+  }
+  .plate{
+    margin-top:18px;padding:16px 18px;
+    background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+    display:flex;flex-wrap:wrap;gap:4px 20px;align-items:baseline;justify-content:space-between;
+  }
+  .plate b{
+    font-family:'Unbounded',system-ui,sans-serif;font-weight:600;
+    font-size:15px;letter-spacing:-.01em;
+  }
+  .plate span{font-size:14px;color:var(--dim)}
+
+  /* ── работы ───────────────────────────────────────────── */
+  .works{
+    background-color:var(--iron);
+    background-image:radial-gradient(circle at 1px 1px,rgba(217,167,68,.10) 1px,transparent 1.25px);
+    background-size:15px 15px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:clamp(42px,5vw,68px) 0;
+  }
+  .works-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 30px;margin-bottom:clamp(22px,3vw,34px)}
+  .works-note{font-size:15px;color:var(--dim);max-width:40ch}
+
+  .grid9{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    border:1px solid var(--line);border-radius:var(--radius);
+    background:rgba(15,12,10,.55);
+  }
+  .grid9 li{
+    display:flex;gap:14px;align-items:flex-start;
+    padding:20px 20px;min-height:96px;
+    border-right:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);
+  }
+  .grid9 li:nth-child(3n){border-right:0}
+  .grid9 li:nth-last-child(-n+3){border-bottom:0}
+  .grid9 .n{font-size:12px;color:var(--brass);letter-spacing:.04em;padding-top:4px;flex:none}
+  .grid9 .t{font-size:16.5px;line-height:1.35}
+
+  .works-foot{
+    display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;margin-top:clamp(20px,3vw,28px);
+  }
+  .works-foot .k{font-size:16px;color:var(--ink)}
+  .works-foot .k span{color:var(--dim)}
+  .works-foot a.tel{font-size:15px;color:var(--dim);text-decoration:none;border-bottom:1px solid var(--line);min-height:44px;display:inline-flex;align-items:center}
+  .works-foot a.tel:hover{color:var(--brass);border-bottom-color:var(--brass-dim)}
+
+  /* ── в боксе ──────────────────────────────────────────── */
+  .inside{padding:clamp(42px,5vw,72px) 0}
+  .inside-grid{display:grid;grid-template-columns:1.45fr 1fr;gap:clamp(18px,2.5vw,28px);align-items:start}
+  .inside h2{margin-bottom:22px}
+  .inside .sub{font-size:15px;color:var(--dim);max-width:52ch;margin-bottom:26px}
+
+  /* ── отзывы ───────────────────────────────────────────── */
+  .reviews{background:var(--iron);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:clamp(42px,5vw,68px) 0}
+  .rev-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px 24px;margin-bottom:6px}
+  .rev-score{font-size:15px;color:var(--dim)}
+  .rev-score b{color:var(--ink);font-family:'Unbounded',system-ui,sans-serif;font-size:19px;font-weight:600}
+  .rev-list{display:grid;grid-template-columns:1fr 1fr;margin-top:clamp(18px,3vw,28px);border-top:1px solid var(--line)}
+  .rev{padding:24px clamp(0px,2vw,26px) 24px 0;border-bottom:1px solid var(--line-soft);display:flex;flex-direction:column;gap:16px}
+  .rev:nth-child(odd){padding-right:clamp(18px,3vw,34px);border-right:1px solid var(--line-soft)}
+  .rev:nth-child(even){padding-left:clamp(18px,3vw,34px)}
+  .rev p{font-size:16.5px;color:#e7dccc;white-space:pre-line}
+  .rev footer{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;font-size:14px;color:var(--dim);margin-top:auto}
+  .rev footer b{color:var(--ink);font-weight:600;font-size:14.5px}
+  .rev footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px;min-height:44px;display:inline-flex;align-items:center}
+  .rev footer a:hover{color:var(--brass);border-bottom-color:var(--brass-dim)}
+  .rev-all{margin-top:22px}
+
+  /* ── адрес ────────────────────────────────────────────── */
+  .place{padding:clamp(42px,5vw,72px) 0 clamp(40px,5vw,64px)}
+  .place-grid{display:grid;grid-template-columns:1fr .9fr;gap:clamp(28px,4vw,56px);align-items:start}
+  .place h2{margin-bottom:24px}
+  dl{margin:0}
+  .dl-row{display:grid;grid-template-columns:110px 1fr;gap:8px 18px;padding:15px 0;border-top:1px solid var(--line-soft);align-items:baseline}
+  .dl-row:last-of-type{border-bottom:1px solid var(--line-soft)}
+  dt{font-size:13px;letter-spacing:.07em;text-transform:uppercase;color:var(--dim)}
+  dd{margin:0;font-size:17px;line-height:1.5}
+  dd a{text-decoration:none;border-bottom:1px solid var(--line);display:inline-flex;align-items:center;min-height:44px}
+  dd a:hover{color:var(--brass);border-bottom-color:var(--brass-dim)}
+  .dl-row .tel-list{display:flex;flex-direction:column;gap:0}
+  .place-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:26px}
+  .landmark{margin-top:20px;font-size:14px;color:var(--dim);max-width:38ch}
+
+  /* ── подвал ───────────────────────────────────────────── */
+  .foot{border-top:1px solid var(--line);padding:clamp(30px,4vw,44px) 0 96px}
+  .foot-peg{
+    height:22px;margin-bottom:26px;
+    background-image:radial-gradient(circle at 1px 11px,rgba(217,167,68,.16) 1.7px,transparent 2px);
+    background-size:15px 22px;background-repeat:repeat-x;
+  }
+  .foot-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 30px;font-size:15px;color:var(--dim)}
+  .foot-row a{text-decoration:none;border-bottom:1px solid var(--line);min-height:44px;display:inline-flex;align-items:center}
+  .foot-row a:hover{color:var(--brass);border-bottom-color:var(--brass-dim)}
+  .disclaimer{margin-top:20px;font-size:13px;color:#8f8271;max-width:70ch}
+
+  /* ── закреплённая панель на телефоне ──────────────────── */
+  .callbar{display:none}
+
+  /* ── адаптив ──────────────────────────────────────────── */
+  @media (max-width:900px){
+    .hero-grid,.inside-grid,.place-grid{grid-template-columns:1fr}
+    .hero-grid{gap:26px}
+    .grid9{grid-template-columns:1fr 1fr}
+    .grid9 li:nth-child(3n){border-right:1px solid var(--line-soft)}
+    .grid9 li:nth-child(2n){border-right:0}
+    .grid9 li:nth-last-child(-n+3){border-bottom:1px solid var(--line-soft)}
+    .grid9 li:last-child{border-bottom:0}
+    .top nav{display:none}
+    .place-grid .shot{order:-1}
+  }
+  @media (max-width:720px){
+    body{font-size:16.5px}
+    .top-tel{display:none}
+    .top-in{min-height:64px}
+    .grid9{grid-template-columns:1fr}
+    .grid9 li{border-right:0;min-height:0;padding:16px 18px}
+    .grid9 li:nth-child(3n){border-right:0}
+    .grid9 li:nth-last-child(-n+3){border-bottom:1px solid var(--line-soft)}
+    .grid9 li:last-child{border-bottom:0}
+    .rev-list{grid-template-columns:1fr}
+    .rev{padding:22px 0}
+    .rev:nth-child(odd){padding-right:0;border-right:0}
+    .rev:nth-child(even){padding-left:0}
+    .dl-row{grid-template-columns:1fr;gap:4px}
+    .callbar{
+      display:flex;gap:10px;align-items:center;
+      position:fixed;left:0;right:0;bottom:0;z-index:20;
+      padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+      background:rgba(15,12,10,.97);
+      border-top:1px solid var(--line);
+    }
+    .callbar .btn{flex:1 1 auto}
+    .callbar .addr{flex:none;font-size:13px;color:var(--dim);text-decoration:none;min-height:44px;display:inline-flex;align-items:center;max-width:120px;line-height:1.25}
+    .foot{padding-bottom:112px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{transition:none!important;animation:none!important}
+  }
+</style>
+</head>
+<body id="top">
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 26 26" aria-hidden="true" fill="none">
+        <rect x="1.2" y="1.2" width="23.6" height="23.6" rx="1.6" stroke="currentColor" stroke-width="1.4"/>
+        <circle cx="7.4" cy="7.4" r="1.5" fill="currentColor"/>
+        <circle cx="18.6" cy="7.4" r="1.5" fill="currentColor"/>
+        <circle cx="13" cy="13" r="1.5" fill="currentColor"/>
+        <circle cx="7.4" cy="18.6" r="1.5" fill="currentColor"/>
+        <circle cx="18.6" cy="18.6" r="1.5" fill="currentColor"/>
+      </svg>
+      <b>Garage masters</b>
+    </a>
+    <nav aria-label="Разделы страницы">
+      <a href="#works">Работы</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#place">Адрес</a>
+    </nav>
+    <a class="top-tel num" href="tel:+73012300550">+7 (301) 230-05-50</a>
+    <a class="btn btn-solid" href="tel:+73012300550">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5Z"/></svg>
+      Позвонить
+    </a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Улан-Удэ, Октябрьский район</p>
+        <h1>Ходовая и пневмоподвеска — автосервис на Бабушкина, 206 к1</h1>
+        <p class="lede">Ходовая часть, пневмоподвеска и стойки, замена масла, шиномонтаж, шины и диски, выкуп б/у автошин. Работают каждый день, с девяти до семи.</p>
+        <div class="facts">
+          <span><b>4,8</b> из 5 · 76 отзывов</span>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="tel:+73012300550">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5Z"/></svg>
+            Позвонить
+          </a>
+          <a class="btn-quiet" href="#place">Где это и когда открыто</a>
+        </div>
+      </div>
+
+      <div>
+        <figure class="shot">
+          <img src="assets/photo5.jpg" width="1280" height="664" alt="Машина поднята на синем подъёмнике; под ней, на паллете, лежит снятый подрамник с двигателем, вокруг инструмент.">
+          <figcaption>Бокс на Бабушкина: машина на подъёмнике, снятый подрамник — рядом на паллете.</figcaption>
+        </figure>
+        <div class="plate">
+          <b>Бабушкина, 206 к1</b>
+          <span>Ежедневно с 09:00 до 19:00</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="works" id="works">
+    <div class="wrap">
+      <div class="works-head">
+        <h2>Чем здесь занимаются</h2>
+        <p class="works-note">Ходовая и пневмоподвеска — основное. Дальше по списку: от масла до б/у резины.</p>
+      </div>
+
+      <ul class="grid9">
+        <li><span class="n num">01</span><span class="t">Ремонт ходовой части автомобиля</span></li>
+        <li><span class="n num">02</span><span class="t">Ремонт пневмоподвески</span></li>
+        <li><span class="n num">03</span><span class="t">Ремонт стоек</span></li>
+        <li><span class="n num">04</span><span class="t">Замена масла</span></li>
+        <li><span class="n num">05</span><span class="t">Аппаратная</span></li>
+        <li><span class="n num">06</span><span class="t">Шины и диски</span></li>
+        <li><span class="n num">07</span><span class="t">Шиномонтаж</span></li>
+        <li><span class="n num">08</span><span class="t">Выкуп автошин б/у</span></li>
+        <li><span class="n num">09</span><span class="t">Продажа автошин б/у</span></li>
+      </ul>
+
+      <div class="works-foot">
+        <p class="k">Цены — по телефону. <span>Скажите, какая машина и что нужно, — назовут стоимость.</span></p>
+        <a class="tel num" href="tel:+73012300550">+7 (301) 230-05-50</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="inside">
+    <div class="wrap">
+      <h2>Как это выглядит внутри</h2>
+      <p class="sub">Железный ангар, синие подъёмники, стеллаж с химией. На стене — жёлтый баннер сервиса: по нему и находите бокс.</p>
+      <div class="inside-grid">
+        <figure class="shot">
+          <img src="assets/photo3.jpg" width="1280" height="664" alt="В боксе машину обливают водой: мокрый пол, мастер в синей куртке у открытого багажника, рядом жёлтый баннер.">
+          <figcaption>Машину обливают в том же боксе: пол мокрый, шланг и канистры — на стеллаже слева.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/price1.jpg" width="2048" height="1063" alt="Передняя часть белого купе в боксе; за машиной на стене висит круглая жёлтая эмблема сервиса с надписью «Garage masters».">
+          <figcaption>Жёлтая эмблема сервиса в боксе — по ней и находят вход.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="wrap">
+      <div class="rev-head">
+        <h2>Отзывы</h2>
+        <p class="rev-score"><b>4,8</b> — 76 отзывов</p>
+      </div>
+
+      <div class="rev-list">
+        <article class="rev">
+          <p>Огромная благодарность ребятам из данного автосервиса! Быстро, качественно, по приемлемой цене👍(работы по ходовке и электрике)
+Успехов! Процветайте!</p>
+          <footer>
+            <b>Сергей Ефимов</b>
+            <span>7 октября 2026</span>
+            <a href="https://2gis.ru/ulanude/firm/70000001062658375/tab/reviews/review/303783373" target="_blank" rel="noopener">Отзыв в 2ГИС</a>
+          </footer>
+        </article>
+
+        <article class="rev">
+          <p>Пять минут и готова👍Спасибо мастеру Максиму 👍шиномонтаж</p>
+          <footer>
+            <b>Мария Патрушева</b>
+            <span>4 сентября 2026</span>
+            <a href="https://2gis.ru/ulanude/firm/70000001062658375/tab/reviews/review/293213713" target="_blank" rel="noopener">Отзыв в 2ГИС</a>
+          </footer>
+        </article>
+
+        <article class="rev">
+          <p>Отличные мастера, настоящие профессионалы своего дела!</p>
+          <footer>
+            <b>Jays Apri</b>
+            <span>28 августа 2026</span>
+            <a href="https://2gis.ru/ulanude/firm/70000001062658375/tab/reviews/review/273240738" target="_blank" rel="noopener">Отзыв в 2ГИС</a>
+          </footer>
+        </article>
+
+        <article class="rev">
+          <p>Отличное место , отдельное спасибо мойщику Анатолию )</p>
+          <footer>
+            <b>Максим Завьялов</b>
+            <span>23 июля 2026</span>
+            <a href="https://2gis.ru/ulanude/firm/70000001062658375/tab/reviews/review/260700218" target="_blank" rel="noopener">Отзыв в 2ГИС</a>
+          </footer>
+        </article>
+      </div>
+
+      <p class="rev-all"><a class="btn-quiet" href="https://2gis.ru/ulanude/firm/70000001062658375/tab/reviews" target="_blank" rel="noopener">Все 76 отзывов в 2ГИС</a></p>
+    </div>
+  </section>
+
+  <section class="place" id="place">
+    <div class="wrap place-grid">
+      <div>
+        <h2>Адрес и часы</h2>
+        <dl>
+          <div class="dl-row">
+            <dt>Адрес</dt>
+            <dd>Улица Бабушкина, 206 к1<br>Октябрьский район, Улан-Удэ, 670049</dd>
+          </div>
+          <div class="dl-row">
+            <dt>Часы</dt>
+            <dd>Ежедневно с 09:00 до 19:00</dd>
+          </div>
+          <div class="dl-row">
+            <dt>Телефоны</dt>
+            <dd class="tel-list">
+              <a class="num" href="tel:+73012300550">+7 (301) 230-05-50</a>
+              <a class="num" href="tel:+79834386888">+7 (983) 438-68-88</a>
+            </dd>
+          </div>
+        </dl>
+        <div class="place-cta">
+          <a class="btn btn-solid" href="tel:+73012300550">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5Z"/></svg>
+            Позвонить
+          </a>
+          <a class="btn-quiet" href="https://2gis.ru/ulanude/firm/70000001062658375" target="_blank" rel="noopener">Посмотреть на карте</a>
+        </div>
+        <p class="landmark">Ориентир — жёлтый баннер на стене бокса, вход с торца.</p>
+      </div>
+
+      <figure class="shot">
+        <img src="assets/photo1.jpg" width="1280" height="664" alt="Белое купе стоит у открытых ворот ангара; на лобовом стекле жёлтая наклейка сервиса.">
+        <figcaption>Ворота бокса: на лобовом стекле — жёлтая наклейка «Garage masters».</figcaption>
+      </figure>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-peg" aria-hidden="true"></div>
+    <div class="foot-row">
+      <div>Garage masters · Улан-Удэ, улица Бабушкина, 206 к1 · <a class="num" href="tel:+73012300550">+7 (301) 230-05-50</a></div>
+      <div><a href="https://2gis.ru/ulanude/firm/70000001062658375" target="_blank" rel="noopener">Карточка организации</a></div>
+    </div>
+    <p class="disclaimer">Демонстрационная страница. Данные и фото — из открытой карточки организации в 2ГИС.</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-solid" href="tel:+73012300550">
+    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5Z"/></svg>
+    Позвонить
+  </a>
+  <a class="addr" href="#place">Бабушкина,<br>206 к1</a>
+</div>
+
+</body>
+</html>

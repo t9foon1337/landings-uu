@@ -1,0 +1,77 @@
+{
+ "id": "70000001064720747",
+ "name": "Шиномонтаж 03",
+ "rating": 5,
+ "reviews_count": 120,
+ "address": "Улица Тулаева, 112а/5",
+ "district": "Октябрьский район, Улан-Удэ, 670013",
+ "hours": "Ежедневно с 09:00 до 21:00",
+ "phones": [
+  "+7 (902) 456-58-85",
+  "+7 (902) 456-58-85"
+ ],
+ "messengers": {
+  "WhatsApp": "https://wa.me/79024565885?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%0A%0A%D0%9F%D0%B8%D1%88%D1%83%20%D0%B8%D0%B7%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%202%D0%93%D0%98%D0%A1.%0A%0A",
+  "Telegram": "https://t.me/+79836334822",
+  "MAX": "https://web.max.ru/218861244"
+ },
+ "services": [
+  "Премия 2ГИС",
+  "Номинант 2026",
+  "Шины и диски",
+  "Шиномонтаж",
+  "Услуги",
+  "ДоставкаВыезд на дом"
+ ],
+ "pricePhotos": [
+  "assets/price1.jpg"
+ ],
+ "photos": [
+  "assets/photo1.jpg",
+  "assets/photo2.jpg",
+  "assets/photo3.jpg",
+  "assets/photo4.jpg",
+  "assets/photo5.jpg"
+ ],
+ "reviews": [
+  {
+   "id": "310564344",
+   "name": "Денис",
+   "date": "2026-10-28",
+   "text": "Отличные ребята!, быстро нашли и устранили проблему!",
+   "rating": 5,
+   "url": "https://2gis.ru/ulanude/firm/70000001064720747/tab/reviews/review/310564344"
+  },
+  {
+   "id": "307639970",
+   "name": "Галина З*",
+   "date": "2026-10-19",
+   "text": "Быстрое обслуживание, приветливый персонал 👌",
+   "rating": 5,
+   "url": "https://2gis.ru/ulanude/firm/70000001064720747/tab/reviews/review/307639970"
+  },
+  {
+   "id": "307379007",
+   "name": "Иван Мартынов",
+   "date": "2026-10-18",
+   "text": "Рекомендую этот сервис, всё хорошо сделали ,выправили литьё .итд . Благодарю",
+   "rating": 5,
+   "url": "https://2gis.ru/ulanude/firm/70000001064720747/tab/reviews/review/307379007"
+  },
+  {
+   "id": "306447598",
+   "name": "Анна ✨",
+   "date": "2026-10-15",
+   "text": "Отличный шиномонтаж!\nРебятам респект🔥\nБыстро и качественно!",
+   "rating": 5,
+   "url": "https://2gis.ru/ulanude/firm/70000001064720747/tab/reviews/review/306447598"
+  }
+ ],
+ "detected_sites": [],
+ "logo": "",
+ "firmUrl": "https://2gis.ru/ulanude/firm/70000001064720747",
+ "cta": {
+  "label": "Написать в MAX",
+  "href": "https://web.max.ru/218861244"
+ }
+}

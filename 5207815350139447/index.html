@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Правка литых дисков — Правка дисков 03, улица Революции 1905 года, 13а, Улан-Удэ</title>
+<meta name="description" content="Правка литых дисков, ремонт порезов и боковых повреждений шин, проточка тормозных дисков, токарные и шлифовальные работы. Улан-Удэ, улица Революции 1905 года, 13а. Ежедневно с 08:30 до 20:00. +7 (301) 246-45-88.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Правка дисков 03">
+<meta property="og:title" content="Правка литых дисков после ям и бордюров — Улан-Удэ">
+<meta property="og:description" content="Правка дисков, ремонт порезов шин, проточка тормозных дисков. Улица Революции 1905 года, 13а. Ежедневно с 08:30 до 20:00.">
+<meta property="og:image" content="https://t9foon1337.github.io/landings-uu/5207815350139447/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/fonts/plexsans.css">
+<link rel="stylesheet" href="assets/fonts/plexmono.css">
+<style>
+  :root{
+    /* бумага миллиметровки, чертёжный синий, красный карандаш */
+    --paper:#f4f3ec;
+    --plate:#fffefa;
+    --ink:#12306b;
+    --ink-deep:#0b2149;
+    --muted:#55627a;
+    --line:#c3ccd8;
+    --line-soft:#dbe1e8;
+    --red:#b0342a;
+    --grid:rgba(18,48,107,.05);
+    --grid-major:rgba(18,48,107,.1);
+
+    --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px;
+    --s6:32px; --s7:48px; --s8:72px; --s9:104px;
+
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --sans:"IBM Plex Sans",system-ui,sans-serif;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    font-family:var(--sans);
+    font-size:17px;
+    line-height:1.6;
+    color:var(--ink-deep);
+    background-color:var(--paper);
+    background-image:
+      linear-gradient(to right,var(--grid) 1px,transparent 1px),
+      linear-gradient(to bottom,var(--grid) 1px,transparent 1px),
+      linear-gradient(to right,var(--grid-major) 1px,transparent 1px),
+      linear-gradient(to bottom,var(--grid-major) 1px,transparent 1px);
+    background-size:8px 8px,8px 8px,40px 40px,40px 40px;
+  }
+  img{max-width:100%;height:auto;display:block}
+  a{color:var(--ink);text-decoration-thickness:1px;text-underline-offset:2px}
+  a:hover{text-decoration-thickness:2px}
+  :focus-visible{outline:3px solid var(--red);outline-offset:3px}
+  h1,h2,h3{font-weight:600;line-height:1.1;letter-spacing:-.015em;margin:0}
+  h1{font-size:clamp(1.9rem,4.6vw,3.35rem);letter-spacing:-.03em}
+  h2{font-size:clamp(1.5rem,3vw,2.35rem)}
+  h3{font-size:1.15rem;line-height:1.25}
+  p{margin:0}
+  .mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+  .wrap{max-width:1140px;margin:0 auto;padding:0 var(--s5)}
+  .skip{position:absolute;left:-9999px}
+  .skip:focus{left:var(--s4);top:var(--s4);z-index:99;background:var(--plate);padding:var(--s3) var(--s4);border:1px solid var(--ink)}
+
+  /* ---------- кнопки ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:var(--s2);
+    min-height:48px;padding:0 var(--s5);
+    font-family:var(--sans);font-size:1rem;font-weight:600;
+    text-decoration:none;border:1px solid var(--ink);border-radius:2px;
+    background:var(--ink);color:var(--plate);
+    transition:background .15s ease,border-color .15s ease;
+  }
+  .btn:hover{background:var(--ink-deep);border-color:var(--ink-deep)}
+  .btn:active{transform:translateY(1px)}
+  .btn-quiet{background:transparent;color:var(--ink);border-color:var(--ink)}
+  .btn-quiet:hover{background:var(--ink);color:var(--plate)}
+
+  /* ---------- шапка ---------- */
+  .bar{
+    position:sticky;top:0;z-index:30;
+    background:var(--paper);border-bottom:1px solid var(--ink);
+  }
+  .bar-in{display:flex;align-items:center;gap:var(--s5);min-height:62px}
+  .brand{display:flex;align-items:center;gap:var(--s3);text-decoration:none;color:var(--ink-deep);min-height:44px}
+  .brand svg{flex:none}
+  .brand-t{
+    font-family:var(--mono);font-size:.82rem;font-weight:600;
+    letter-spacing:.1em;text-transform:uppercase;line-height:1.25;
+  }
+  .brand-t small{display:block;font-weight:400;font-size:.72rem;letter-spacing:.06em;color:var(--muted)}
+  .bar-nav{margin-left:auto;display:flex;gap:var(--s5)}
+  .bar-nav a{
+    color:var(--ink-deep);text-decoration:none;font-size:.92rem;
+    border-bottom:1px solid transparent;padding:var(--s1) 0;
+  }
+  .bar-nav a:hover{border-bottom-color:var(--red)}
+  .bar .btn{min-height:42px;padding:0 var(--s4);font-size:.92rem}
+
+  /* ---------- первый экран ---------- */
+  .hero{padding:var(--s8) 0 var(--s7);border-bottom:1px solid var(--ink)}
+  .hero-in{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:var(--s8);align-items:center}
+  .kicker{
+    font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
+    display:flex;align-items:center;gap:var(--s3);margin-bottom:var(--s5);
+  }
+  .kicker::after{content:"";flex:1;height:1px;background:var(--line)}
+  .lede{margin-top:var(--s4);font-size:1.06rem;max-width:44ch;color:#26354d}
+  .cta-row{display:flex;align-items:center;gap:var(--s5);flex-wrap:wrap;margin-top:var(--s5)}
+  .tel{font-size:1.02rem;font-weight:600;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--line);display:inline-flex;align-items:center;min-width:44px;min-height:44px}
+  .tel:hover{border-bottom-color:var(--ink)}
+
+  .facts{
+    display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+    margin:var(--s6) 0 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  }
+  .facts > div{padding:var(--s3) var(--s4) var(--s3) 0}
+  .facts > div + div{padding-left:var(--s4);border-left:1px solid var(--line-soft)}
+  .facts dt{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .facts dd{margin:var(--s1) 0 0;font-size:.95rem;font-weight:600;line-height:1.35}
+  .facts dd span{font-weight:400;color:var(--muted)}
+  .facts .score{font-family:var(--mono);font-size:1.35rem;line-height:1.1}
+
+  .hero-fig{margin:0}
+  .hero-fig svg{width:100%;height:auto;display:block}
+  .hero-fig figcaption{
+    margin-top:var(--s3);font-family:var(--mono);font-size:.72rem;
+    letter-spacing:.06em;color:var(--muted);text-transform:uppercase;
+    border-top:1px solid var(--line);padding-top:var(--s2);
+  }
+
+  /* ---------- секции ---------- */
+  section{position:relative}
+  section[id]{scroll-margin-top:78px}
+  .band{padding:var(--s8) 0}
+  .band + .band{border-top:1px solid var(--line)}
+  .sec-head{display:flex;align-items:baseline;gap:var(--s4);flex-wrap:wrap;margin-bottom:var(--s6)}
+  .sec-no{
+    font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;color:var(--red);
+    border:1px solid var(--red);padding:2px 6px;line-height:1.4;
+  }
+  .sec-lead{margin-top:var(--s3);color:var(--muted);max-width:58ch}
+
+  /* ---------- спецификация цен ---------- */
+  .spec{
+    width:100%;border-collapse:collapse;background:var(--plate);
+    border:1px solid var(--ink);font-size:1rem;
+  }
+  .spec caption{
+    text-align:left;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--muted);padding:0 0 var(--s2);
+  }
+  .spec th{
+    font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--muted);font-weight:400;text-align:left;padding:var(--s3) var(--s4);
+    border-bottom:1px solid var(--ink);
+  }
+  .spec th:last-child,.spec td:last-child{text-align:right;white-space:nowrap}
+  .spec td{padding:11px var(--s4);border-bottom:1px solid var(--line-soft);vertical-align:top}
+  .spec tr:last-child td{border-bottom:0}
+  .spec .pos{
+    font-family:var(--mono);font-size:.78rem;color:var(--muted);
+    width:2.6em;padding-right:0;
+  }
+  .spec .price{font-family:var(--mono);font-weight:600;font-size:.98rem}
+  .spec tr:hover td{background:#f5f6f1}
+  .spec-foot{
+    margin-top:var(--s4);font-size:.9rem;color:var(--muted);max-width:60ch;
+  }
+
+  /* ---------- процесс ---------- */
+  .steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;position:relative}
+  .steps::before{
+    content:"";position:absolute;left:0;right:0;top:11px;height:1px;background:var(--ink);
+  }
+  .steps::after{
+    content:"";position:absolute;left:0;top:4px;width:100%;height:15px;
+    background-image:repeating-linear-gradient(to right,var(--ink) 0 1px,transparent 1px 12px);
+    background-size:12px 15px;background-repeat:repeat-x;
+    opacity:.22;pointer-events:none;
+  }
+  .steps li{position:relative;padding:var(--s6) var(--s5) 0 0}
+  .steps li::before{
+    content:"";position:absolute;top:7px;left:0;width:9px;height:9px;
+    background:var(--paper);border:1px solid var(--ink);
+  }
+  .steps .no{
+    font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;color:var(--red);
+    display:block;margin-bottom:var(--s2);
+  }
+  .steps h3{margin-bottom:var(--s2)}
+  .steps p{font-size:.95rem;color:#2b3a52;max-width:32ch}
+
+  /* ---------- цех и фото ---------- */
+  .works{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s7);align-items:start}
+  .works p + p{margin-top:var(--s4)}
+  .works .lede{max-width:40ch}
+  .svc{list-style:none;margin:var(--s5) 0 0;padding:0;border-top:1px solid var(--ink)}
+  .svc li{
+    display:flex;gap:var(--s4);align-items:baseline;
+    padding:var(--s3) 0;border-bottom:1px solid var(--line-soft);font-size:.98rem;
+  }
+  .svc li span{font-family:var(--mono);font-size:.72rem;color:var(--muted);min-width:2.2em}
+
+  .shots{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4)}
+  .shots figure{margin:0}
+  .shots figure:first-child{grid-column:1 / -1}
+  .shots figure:last-child{grid-column:1 / -1}
+  .shots figure:last-child img{max-height:220px}
+  .shots img{border:1px solid var(--ink);width:100%;object-fit:cover}
+  .shots figcaption{
+    margin-top:var(--s2);font-size:.82rem;line-height:1.45;color:var(--muted);
+    border-left:1px solid var(--line);padding-left:var(--s3);
+  }
+
+  /* ---------- отзывы ---------- */
+  .quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s4)}
+  .quote{
+    display:flex;flex-direction:column;justify-content:space-between;gap:var(--s5);
+    background:var(--plate);border:1px solid var(--line);
+    padding:var(--s5);text-decoration:none;color:inherit;
+    transition:border-color .15s ease;
+  }
+  .quote:hover{border-color:var(--ink)}
+  .quote:first-child{grid-column:1 / -1;border-color:var(--ink)}
+  .quote:first-child p{font-size:1.22rem;line-height:1.5;max-width:70ch;letter-spacing:-.01em}
+  .quote p{font-size:.98rem;color:#22314a}
+  .quote footer{display:flex;justify-content:space-between;align-items:baseline;gap:var(--s3);flex-wrap:wrap}
+  .quote .who{font-weight:600;font-size:.92rem}
+  .quote .when{font-family:var(--mono);font-size:.74rem;color:var(--muted);margin-left:var(--s2)}
+  .quote .src{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--line)}
+
+  /* ---------- контакты ---------- */
+  .contact{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:var(--s7);align-items:start}
+  .big-tel{
+    display:inline-block;font-family:var(--mono);font-weight:600;
+    font-size:clamp(1.5rem,4.2vw,2.5rem);line-height:1.15;letter-spacing:-.02em;
+    color:var(--ink);text-decoration:none;border-bottom:2px solid var(--line);
+    margin:var(--s2) 0 var(--s5);
+  }
+  .big-tel:hover{border-bottom-color:var(--red)}
+  .dl{margin:0;border-top:1px solid var(--ink)}
+  .dl > div{display:grid;grid-template-columns:9em minmax(0,1fr);gap:var(--s4);padding:var(--s3) 0;border-bottom:1px solid var(--line-soft)}
+  .dl dt{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+  .dl dd{margin:0;font-size:1rem}
+  .note{
+    font-size:.9rem;color:var(--muted);border-left:2px solid var(--red);
+    padding:var(--s1) 0 var(--s1) var(--s4);margin-top:var(--s5);max-width:46ch;
+  }
+
+  /* ---------- подвал ---------- */
+  .foot{border-top:1px solid var(--ink);padding:var(--s7) 0 var(--s6);margin-top:var(--s8)}
+  .foot-in{display:flex;gap:var(--s7);justify-content:space-between;flex-wrap:wrap;align-items:flex-start}
+  .foot-name{font-family:var(--mono);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+  .foot p{font-size:.9rem;color:var(--muted);max-width:34ch}
+  .foot a{color:var(--muted)}
+  .disclaimer{
+    margin-top:var(--s6);padding-top:var(--s4);border-top:1px solid var(--line);
+    font-size:.8rem;color:var(--muted);max-width:70ch;
+  }
+
+  /* ---------- мобильная панель ---------- */
+  .dock{display:none}
+
+  @media (max-width:900px){
+    .hero-in{grid-template-columns:minmax(0,1fr);gap:var(--s6)}
+    .works,.contact{grid-template-columns:minmax(0,1fr);gap:var(--s6)}
+    .quotes{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .bar-nav{display:none}
+  }
+  @media (max-width:640px){
+    body{font-size:16px}
+    .wrap{padding:0 var(--s4)}
+    .band{padding:var(--s7) 0}
+    .hero{padding:var(--s6) 0 var(--s7)}
+    .facts{grid-template-columns:1fr 1fr}
+    .facts > div{padding:var(--s3) var(--s3) var(--s3) 0}
+    .facts > div:nth-child(3){grid-column:1 / -1;border-left:0;padding-left:0;border-top:1px solid var(--line-soft)}
+    .facts > div:nth-child(2){padding-left:var(--s3)}
+    .steps{grid-template-columns:minmax(0,1fr);gap:0}
+    .steps::before{left:11px;right:auto;top:0;bottom:0;width:1px;height:auto}
+    .steps::after{
+      left:4px;top:0;width:15px;height:100%;
+      background-image:repeating-linear-gradient(to bottom,var(--ink) 0 1px,transparent 1px 12px);
+      background-size:15px 12px;
+    }
+    .steps li{padding:0 0 var(--s5) var(--s6)}
+    .steps li:last-child{padding-bottom:0}
+    .steps li::before{top:4px;left:7px}
+    .steps p{max-width:none}
+    .quotes{grid-template-columns:minmax(0,1fr)}
+    .shots{grid-template-columns:1fr 1fr;gap:var(--s3)}
+    .spec{font-size:.95rem}
+    .spec th,.spec td{padding-left:var(--s3);padding-right:var(--s3)}
+    .spec .pos{width:2.2em}
+    .dl > div{grid-template-columns:minmax(0,1fr);gap:2px}
+    .bar .btn{padding:0 var(--s3)}
+    .brand-t small{display:none}
+    body{padding-bottom:76px}
+    .dock{
+      display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;
+      gap:var(--s2);padding:var(--s2) var(--s4) calc(var(--s2) + env(safe-area-inset-bottom));
+      background:var(--paper);border-top:1px solid var(--ink);
+    }
+    .dock .btn{flex:1;min-height:48px}
+    .dock .btn-quiet{flex:0 0 auto;padding:0 var(--s4);font-family:var(--mono);font-size:.85rem}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none !important;transition:none !important}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<header class="bar">
+  <div class="wrap bar-in">
+    <a class="brand" href="#top" aria-label="Правка дисков 03 — на главную">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" fill="#12306b"/>
+        <circle cx="16" cy="14" r="7" fill="none" stroke="#f4f3ec" stroke-width="1.8"/>
+        <circle cx="16" cy="14" r="2" fill="#f4f3ec"/>
+        <path d="M3 27h26" stroke="#f4f3ec" stroke-width="1.4"/>
+        <path d="M3 27l4-2.2v4.4zM29 27l-4-2.2v4.4z" fill="#f4f3ec"/>
+        <path d="M19.5 7.4l3 3.8" stroke="#d4544a" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-t">Правка дисков 03<small>Улан-Удэ · Революции 1905 года, 13а</small></span>
+    </a>
+    <nav class="bar-nav" aria-label="Разделы страницы">
+      <a href="#raboty">Работы и цены</a>
+      <a href="#process">Как правим</a>
+      <a href="#ceh">Цех</a>
+      <a href="#otzyvy">Отзывы</a>
+      <a href="#kontakty">Контакты</a>
+    </nav>
+    <a class="btn" href="tel:+73012464588">Позвонить</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="wrap hero-in">
+      <div>
+        <p class="kicker">Железнодорожный район · Улан-Удэ</p>
+        <h1>Правка литых дисков после ям и бордюров</h1>
+        <p class="lede">Правим диски, ремонтируем порезы и боковые повреждения шин, протачиваем тормозные диски. Ежедневно с 08:30 до 20:00.</p>
+        <div class="cta-row">
+          <a class="btn" href="tel:+73012464588">Позвонить</a>
+          <a class="tel mono" href="tel:+73012464588">+7 (301) 246-45-88</a>
+        </div>
+        <dl class="facts">
+          <div>
+            <dt>Рейтинг в 2ГИС</dt>
+            <dd><span class="score">4,9</span> <span>· 416 отзывов</span></dd>
+          </div>
+          <div>
+            <dt>Премия 2ГИС</dt>
+            <dd>Лучший шиномонтаж 2026</dd>
+          </div>
+          <div>
+            <dt>Часы</dt>
+            <dd>Ежедневно с 08:30 до 20:00</dd>
+          </div>
+        </dl>
+      </div>
+
+      <figure class="hero-fig">
+        <svg viewBox="0 0 430 400" role="img" aria-labelledby="wt wd" width="430" height="400">
+          <title id="wt">Схема колеса с размерной линией и отметкой зоны правки</title>
+          <desc id="wd">Вид диска спереди: обод, пять спиц, ступица с болтами. Внизу размерная линия диаметра колеса, сверху выноска «биение», слева красным отмечена зона правки.</desc>
+          <defs>
+            <pattern id="mm" width="8" height="8" patternUnits="userSpaceOnUse">
+              <path d="M8 0H0v8" fill="none" stroke="#12306b" stroke-opacity=".13" stroke-width=".7"/>
+            </pattern>
+            <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0 0 10 5 0 10z" fill="#12306b"/>
+            </marker>
+          </defs>
+
+          <rect x="1" y="1" width="428" height="391" fill="url(#mm)" stroke="#12306b" stroke-width="1.4"/>
+
+          <!-- колесо -->
+          <circle cx="215" cy="150" r="112" fill="none" stroke="#12306b" stroke-width="2"/>
+          <circle cx="215" cy="150" r="103" fill="none" stroke="#12306b" stroke-opacity=".45" stroke-width=".9" stroke-dasharray="3 4"/>
+          <circle cx="215" cy="150" r="90" fill="none" stroke="#12306b" stroke-width="2.6"/>
+          <circle cx="215" cy="150" r="84" fill="none" stroke="#12306b" stroke-opacity=".5" stroke-width=".9"/>
+
+          <g stroke="#b9c6db" stroke-width="9" stroke-linecap="butt">
+            <line x1="215" y1="150" x2="215" y2="60"/>
+            <line x1="215" y1="150" x2="300.6" y2="177.8"/>
+            <line x1="215" y1="150" x2="267.9" y2="222.9"/>
+            <line x1="215" y1="150" x2="162.1" y2="222.9"/>
+            <line x1="215" y1="150" x2="129.4" y2="177.8"/>
+          </g>
+
+          <circle cx="215" cy="150" r="27" fill="#fffefa" stroke="#12306b" stroke-width="1.6"/>
+          <g fill="#12306b">
+            <circle cx="215" cy="135.5" r="4.4"/>
+            <circle cx="228.8" cy="145.5" r="4.4"/>
+            <circle cx="223.6" cy="161.7" r="4.4"/>
+            <circle cx="206.4" cy="161.7" r="4.4"/>
+            <circle cx="201.2" cy="145.5" r="4.4"/>
+          </g>
+          <circle cx="215" cy="150" r="6" fill="#12306b"/>
+
+          <!-- размерная линия диаметра -->
+          <g stroke="#12306b" stroke-width="1">
+            <line x1="103" y1="150" x2="103" y2="304"/>
+            <line x1="327" y1="150" x2="327" y2="304"/>
+            <line x1="103" y1="294" x2="327" y2="294" marker-start="url(#arw)" marker-end="url(#arw)"/>
+          </g>
+          <rect x="163" y="282" width="104" height="24" fill="#f4f3ec"/>
+          <text x="215" y="299" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="15" letter-spacing="1.4" fill="#12306b">Ø КОЛЕСА</text>
+
+          <!-- выноска биения -->
+          <circle cx="284" cy="92" r="2.6" fill="#12306b"/>
+          <polyline points="284,92 344,52 410,52" fill="none" stroke="#12306b" stroke-width="1"/>
+          <text x="410" y="40" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="15" letter-spacing="1.2" fill="#12306b">БИЕНИЕ</text>
+
+          <!-- красный карандаш: зона правки -->
+          <path d="M132 208c-4-9-9-14-12-24-3-10-2-20 0-26 3-8 4-16 2-24-2-7-6-12-8-19"
+                fill="none" stroke="#b0342a" stroke-width="2.6" stroke-linecap="round"/>
+          <circle cx="120" cy="200" r="2.4" fill="#b0342a"/>
+          <line x1="96" y1="224" x2="118" y2="201" stroke="#b0342a" stroke-width="1"/>
+          <text x="10" y="236" font-family="IBM Plex Mono, monospace" font-size="15" letter-spacing="1.2" fill="#b0342a">ПРАВКА</text>
+
+          <!-- штамп -->
+          <line x1="1" y1="330" x2="429" y2="330" stroke="#12306b" stroke-width="1.2"/>
+          <line x1="180" y1="330" x2="180" y2="392" stroke="#12306b" stroke-width="1"/>
+          <line x1="300" y1="330" x2="300" y2="392" stroke="#12306b" stroke-width="1"/>
+          <text x="14" y="356" font-family="IBM Plex Mono, monospace" font-size="14" letter-spacing=".8" fill="#12306b">ПРАВКА ДИСКОВ 03</text>
+          <text x="14" y="376" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing=".4" fill="#55627a">РЕВОЛЮЦИИ 1905 ГОДА, 13А</text>
+          <text x="192" y="356" font-family="IBM Plex Mono, monospace" font-size="13" letter-spacing=".8" fill="#12306b">ЛИСТ 1</text>
+          <text x="192" y="376" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing=".8" fill="#55627a">СХЕМА</text>
+          <text x="312" y="356" font-family="IBM Plex Mono, monospace" font-size="13" letter-spacing=".8" fill="#12306b">08:30—20:00</text>
+          <text x="312" y="376" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing=".8" fill="#55627a">ЕЖЕДНЕВНО</text>
+        </svg>
+        <figcaption>Контроль по ободу: правят до размеров, а не «на глаз»</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band" id="raboty">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-no">01</span>
+        <h2>Работы и цены</h2>
+      </div>
+      <p class="sec-lead">Цены «от». Точную сумму называют по телефону: она зависит от диска и повреждения.</p>
+
+      <table class="spec">
+        <caption>Спецификация работ · цена от</caption>
+        <thead>
+          <tr><th scope="col">Поз.</th><th scope="col">Работа</th><th scope="col">Цена</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="pos">01</td><td>Ремонт литых дисков</td><td class="price">от 900 ₽</td></tr>
+          <tr><td class="pos">02</td><td>Проточка дисков</td><td class="price">от 1 500 ₽</td></tr>
+          <tr><td class="pos">03</td><td>Ремонт боковых повреждений шин</td><td class="price">от 2 000 ₽</td></tr>
+          <tr><td class="pos">04</td><td>Ремонт глушителей</td><td class="price">от 500 ₽</td></tr>
+          <tr><td class="pos">05</td><td>СХОД - РАЗВАЛ</td><td class="price">от 1 100 ₽</td></tr>
+          <tr><td class="pos">06</td><td>Шлифовка ГБЦ (головоки блока цилиндров)</td><td class="price">от 1 500 ₽</td></tr>
+          <tr><td class="pos">07</td><td>Шлифовка деталей</td><td class="price">от 300 ₽</td></tr>
+          <tr><td class="pos">08</td><td>Токарно-фрезерные и сверлильные работы</td><td class="price">от 300 ₽</td></tr>
+          <tr><td class="pos">09</td><td>Заправка и обслуживание автокодиционеров</td><td class="price">от 2 500 ₽</td></tr>
+          <tr><td class="pos">10</td><td>Аппаратная промывка печек</td><td class="price">от 3 500 ₽</td></tr>
+        </tbody>
+      </table>
+      <p class="spec-foot">Остальные работы — ремонт ходовой части, двигателей, шиномонтаж, металлообработка — считают по объёму, звоните.</p>
+    </div>
+  </section>
+
+  <section class="band" id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-no">02</span>
+        <h2>Как проходит правка</h2>
+      </div>
+      <ol class="steps">
+        <li>
+          <span class="no">01</span>
+          <h3>Замер</h3>
+          <p>Меряют биение по ободу и посадочной плоскости: видно, где диск ушёл и на сколько.</p>
+        </li>
+        <li>
+          <span class="no">02</span>
+          <h3>Правка</h3>
+          <p>Давят в зону деформации, пока обод не вернётся в круг. Порез или трещину сначала варят.</p>
+        </li>
+        <li>
+          <span class="no">03</span>
+          <h3>Контроль</h3>
+          <p>Снова индикатор. Если биение осталось — правят ещё один проход, до допуска.</p>
+        </li>
+        <li>
+          <span class="no">04</span>
+          <h3>Сборка</h3>
+          <p>Собирают колесо, при необходимости ремонтируют шину и балансируют.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band" id="ceh">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-no">03</span>
+        <h2>Цех, в котором варят и точат</h2>
+      </div>
+      <div class="works">
+        <div>
+          <p class="lede">Правка диска — это металл, сварка и станок. Здесь же шлифуют, точат и фрезеруют: в цеху стоят фигуры, собранные из дисков, шестерён и кузовных деталей.</p>
+          <ul class="svc">
+            <li><span>01</span>Ремонт ходовой части автомобиля</li>
+            <li><span>02</span>Проточка тормозных дисков</li>
+            <li><span>03</span>Ремонт двигателей</li>
+            <li><span>04</span>Шлифовка</li>
+            <li><span>05</span>Шиномонтаж</li>
+            <li><span>06</span>Металлообработка</li>
+          </ul>
+        </div>
+        <div class="shots">
+          <figure>
+            <img src="assets/photo4.jpg" alt="Фигура робота, сваренная из кузовных деталей, цепи и гаек, стоит в цеху перед серебристым автомобилем" width="1280" height="664" loading="lazy">
+            <figcaption>Фигура из кузовных деталей, цепи и гаек — стоит в цеху рядом с машиной на подъёмнике</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/photo1.jpg" alt="Модель болида из дисков, шестерён и подшипников на синем верстаке" width="1280" height="664" loading="lazy">
+            <figcaption>Болид из дисков, шестерён и подшипников на верстаке</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/photo3.jpg" alt="Мотоцикл, сваренный из труб, гаек и шестерён, лежит на синем верстаке" width="1280" height="664" loading="lazy">
+            <figcaption>Мотоцикл из труб, гаек и шестерён</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/photo5.jpg" alt="Крупно: узел фигуры из шестерён и болтов со сварным швом, позади автомобиль" width="1280" height="664" loading="lazy">
+            <figcaption>Узел крупно: шестерни, болты, сварной шов</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="otzyvy">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-no">04</span>
+        <h2>Отзывы</h2>
+      </div>
+      <p class="sec-lead">4,9 из 5 · 416 отзывов в 2ГИС. Каждый отзыв открывается в карточке.</p>
+      <div class="quotes">
+        <a class="quote" href="https://2gis.ru/ulanude/firm/5207815350139447/tab/reviews/review/309096172" target="_blank" rel="noopener">
+          <p>«Как подъехал ко мне сразу подошли, я объяснил задачу и ребята сразу взялись за работу и сделали необходимое, не смотря что машин на переобувку было много. Рекомендую был сжечь впервые но теперь буду обращаться! Понравилось что за нал скидка аж 10%»</p>
+          <footer>
+            <span><span class="who">Михаил</span> <time class="when" datetime="2026-10-24">24 октября 2026</time></span>
+            <span class="src">2ГИС</span>
+          </footer>
+        </a>
+        <a class="quote" href="https://2gis.ru/ulanude/firm/5207815350139447/tab/reviews/review/314267813" target="_blank" rel="noopener">
+          <p>«сделали правку дисков, быстро недорого»</p>
+          <footer>
+            <span><span class="who">Arsalan Budazhapov</span> <time class="when" datetime="2026-11-06">6 ноября 2026</time></span>
+            <span class="src">2ГИС</span>
+          </footer>
+        </a>
+        <a class="quote" href="https://2gis.ru/ulanude/firm/5207815350139447/tab/reviews/review/312080388" target="_blank" rel="noopener">
+          <p>«Очень понравился ваш коллектив, все быстро сделали. Спасибо 😊»</p>
+          <footer>
+            <span><span class="who">Оксана С</span> <time class="when" datetime="2026-10-31">31 октября 2026</time></span>
+            <span class="src">2ГИС</span>
+          </footer>
+        </a>
+        <a class="quote" href="https://2gis.ru/ulanude/firm/5207815350139447/tab/reviews/review/311483086" target="_blank" rel="noopener">
+          <p>«Рекомендую, мастера своего дела. Сделали быстро👍»</p>
+          <footer>
+            <span><span class="who">Марина Убашеева</span> <time class="when" datetime="2026-10-30">30 октября 2026</time></span>
+            <span class="src">2ГИС</span>
+          </footer>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="kontakty">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-no">05</span>
+        <h2>Приехать или позвонить</h2>
+      </div>
+      <div class="contact">
+        <div>
+          <a class="big-tel" href="tel:+73012464588">+7 (301) 246-45-88</a>
+          <div class="cta-row">
+            <a class="btn" href="tel:+73012464588">Позвонить</a>
+          </div>
+          <p class="note">Позвоните — свободное время и цену уточнят по телефону.</p>
+        </div>
+        <div>
+          <dl class="dl">
+            <div><dt>Адрес</dt><dd>Революции 1905 года улица, 13а</dd></div>
+            <div><dt>Район</dt><dd>Железнодорожный район, Улан-Удэ, 670024</dd></div>
+            <div><dt>Часы</dt><dd>Ежедневно с 08:30 до 20:00</dd></div>
+            <div><dt>Отзывы</dt><dd><a href="https://2gis.ru/ulanude/firm/5207815350139447" target="_blank" rel="noopener">Карточка организации на 2ГИС</a> — 416 отзывов, фото</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-in">
+      <div>
+        <p class="foot-name">Правка дисков 03</p>
+        <p style="margin-top:var(--s3)">Правка и проточка дисков, ремонт шин, шиномонтаж, токарные и шлифовальные работы.</p>
+      </div>
+      <div>
+        <p><a href="tel:+73012464588" class="mono">+7 (301) 246-45-88</a></p>
+        <p>Революции 1905 года улица, 13а<br>Улан-Удэ, 670024</p>
+        <p>Ежедневно с 08:30 до 20:00</p>
+      </div>
+    </div>
+    <p class="disclaimer">Демонстрационная страница. Данные и фото — из открытой карточки организации в 2ГИС.</p>
+  </div>
+</footer>
+
+<div class="dock">
+  <a class="btn" href="tel:+73012464588">Позвонить</a>
+  <a class="btn btn-quiet mono" href="#raboty">Цены</a>
+</div>
+
+<script>
+  // единственный момент движения: размерная линия «прочёркивается» один раз
+  (function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) return;
+    var dim = document.querySelector('.hero-fig svg line[marker-start]');
+    if (!dim || !dim.getTotalLength) return;
+    var len = dim.getTotalLength();
+    dim.style.strokeDasharray = len;
+    dim.style.strokeDashoffset = len;
+    dim.style.transition = 'stroke-dashoffset .9s ease-out .15s';
+    requestAnimationFrame(function(){ dim.style.strokeDashoffset = '0'; });
+    dim.addEventListener('transitionend', function(){
+      dim.style.strokeDasharray = '';
+      dim.style.strokeDashoffset = '';
+    }, {once:true});
+  })();
+</script>
+</body>
+</html>

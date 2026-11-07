@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Шиномонтаж 03 — улица Тулаева, 112а/5, Улан-Удэ</title>
+<meta name="description" content="Шиномонтаж 03 на улице Тулаева, 112а/5 в Улан-Удэ: шины и диски, балансировка, правка литых дисков, ремонт порезов, выезд на дом. Ежедневно с 09:00 до 21:00, +7 902 456-58-85.">
+<meta name="theme-color" content="#14130f">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/fonts/russo.css">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Шиномонтаж 03">
+<meta property="og:title" content="Шиномонтаж 03 — улица Тулаева, 112а/5">
+<meta property="og:description" content="Шины и диски, балансировка, правка литых дисков, ремонт порезов, выезд на дом. Ежедневно с 09:00 до 21:00.">
+<meta property="og:image" content="https://t9foon1337.github.io/landings-uu/70000001064720747/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --wall:#f0eeea;      /* светлая рифлёная стена бокса */
+  --dust:#e3dcd1;      /* грунт на площадке */
+  --ink:#14130f;       /* баллончик, чёрный */
+  --ink-soft:#2a2822;
+  --muted:#57534a;
+  --red:#bf2318;       /* красная краска с росписи */
+  --red-deep:#8e1a12;
+  --gate:#15614f;      /* зелёные ворота рядом со стеной */
+  --line:#cec6b7;
+  --r:3px;
+  --pad:clamp(20px,4vw,24px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--wall);color:var(--ink);
+  font:400 16.5px/1.55 "GolosText",system-ui,sans-serif;
+  background-image:repeating-linear-gradient(90deg,rgba(20,19,15,.028) 0 1px,transparent 1px 24px);
+}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 var(--pad)}
+h1,h2,h3{font-family:"Russo One","GolosText",sans-serif;font-weight:400;margin:0;letter-spacing:.01em}
+.brand .mark path,.gear path{fill:currentColor}
+.brand .mark .disc{fill:var(--wall)}
+.brand .mark .num{fill:var(--ink)}
+.gear .disc{fill:var(--wall)}
+.gear .num{fill:var(--ink)}
+.swipe{fill:var(--red)}
+.brand .mark text,.gear text{font-family:"Russo One",sans-serif}
+img{max-width:100%}
+a{color:inherit}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+
+/* шапка */
+header.site{position:sticky;top:0;z-index:50;background:var(--ink);color:var(--wall)}
+.bar{display:flex;align-items:center;gap:clamp(12px,2.4vw,28px);min-height:66px;padding-top:8px;padding-bottom:8px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;margin-right:auto;min-width:0}
+.brand .mark{width:38px;height:38px;flex:none;color:var(--wall)}
+.brand b{display:block;font:400 16px/1 "Russo One",sans-serif;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+.brand small{display:block;font-size:12px;color:#a49e94;margin-top:3px}
+nav{display:flex;gap:22px;font-size:14.5px}
+nav a{color:#cfc9bf;text-decoration:none;padding:12px 0;transition:color .18s}
+nav a:hover{color:#fff}
+.bar-actions{display:flex;align-items:center;gap:16px}
+.tel-top{font-family:"Russo One",sans-serif;font-size:15px;text-decoration:none;color:var(--wall);white-space:nowrap;transition:color .18s}
+.tel-top:hover{color:#f09a90}
+
+/* кнопки */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border-radius:var(--r);
+     border:1px solid transparent;font:500 15.5px/1 "GolosText",sans-serif;text-decoration:none;
+     transition:background-color .18s,color .18s,border-color .18s,transform .1s}
+.btn:active{transform:translateY(1px)}
+.btn-solid{background:var(--red);color:#fff;box-shadow:0 2px 0 var(--red-deep)}
+.btn-solid:hover{background:var(--red-deep);box-shadow:0 2px 0 #65110b}
+.btn-line{border-color:var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--wall)}
+.btn-line-light{border-color:#4a463e;color:var(--wall)}
+.btn-line-light:hover{background:var(--wall);color:var(--ink);border-color:var(--wall)}
+
+/* первый экран */
+.hero-figure{margin:0;background:#0c0b09;display:block}
+.hero-figure img{display:block;width:100%;height:clamp(280px,46vh,500px);object-fit:cover;object-position:50% 50%}
+.fascia{padding:clamp(24px,3.6vw,44px) 0 clamp(18px,2.6vw,30px)}
+h1{display:flex;flex-direction:column;gap:10px}
+h1 .l1{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(10px,1.6vw,22px);
+       color:var(--red);text-transform:uppercase;font-size:clamp(29px,5vw,62px);line-height:.96}
+h1 .gear{width:clamp(40px,5.2vw,64px);height:auto;flex:none;color:var(--ink)}
+h1 .l2{font-size:clamp(14px,1.7vw,21px);color:var(--ink);letter-spacing:.02em;line-height:1.2}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(20px,3.4vw,52px);align-items:end;margin-top:clamp(18px,2.4vw,28px)}
+.lede{margin:0;font-size:clamp(16px,1.2vw,18px);line-height:1.55;color:var(--muted);max-width:46ch}
+.lede strong{color:var(--ink);font-weight:600}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:flex-end}
+.hero-actions .btn{flex:0 1 auto}
+.facts{display:flex;flex-wrap:wrap;gap:6px 30px;margin-top:clamp(18px,2.6vw,30px);padding-top:16px;
+       border-top:1px solid var(--line);font-size:13.5px;color:var(--muted)}
+.facts b{color:var(--ink);font-weight:600}
+.facts .award b{color:var(--red)}
+
+/* секции */
+section{padding:clamp(44px,5.6vw,80px) 0}
+.sec-head{display:flex;gap:14px 30px;align-items:baseline;justify-content:space-between;flex-wrap:wrap;margin-bottom:clamp(18px,2.6vw,30px)}
+h2{font-size:clamp(21px,2.8vw,33px);text-transform:uppercase;color:var(--ink);line-height:1.05}
+.sec-head p{margin:0;font-size:15px;color:var(--muted);max-width:44ch}
+.paint{display:block;width:min(300px,56vw);height:auto;margin:0 0 clamp(10px,1.6vw,16px) -3px}
+
+/* работы */
+.svc{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.svc li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px clamp(14px,2.4vw,40px);
+        padding:clamp(16px,2.2vw,26px) clamp(6px,1.4vw,18px);border-bottom:1px solid var(--line);
+        transition:background-color .2s}
+.svc li:hover{background:var(--dust)}
+.svc .n{font-family:"Russo One",sans-serif;font-size:clamp(19px,2.2vw,26px);color:var(--red);line-height:1.1;min-width:2.2ch}
+.svc h3{font-size:clamp(16.5px,1.8vw,21px);text-transform:uppercase;line-height:1.15}
+.svc p{grid-column:2;margin:7px 0 0;font-size:15.5px;line-height:1.55;color:var(--muted);max-width:58ch}
+
+/* цены */
+.price{background:var(--ink);color:var(--wall);background-image:none}
+.price h2{color:var(--wall)}
+.price .grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(20px,3.4vw,52px);align-items:end}
+.price .big{font-family:"Russo One",sans-serif;font-size:clamp(24px,3.2vw,40px);line-height:1.1;color:#fff;max-width:24ch;margin:0}
+.price p{font-size:15.5px;line-height:1.6;color:#b6b0a5;max-width:46ch;margin:14px 0 0}
+.price .side{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.price .tel{font-family:"Russo One",sans-serif;font-size:clamp(20px,2.6vw,30px);color:#fff;text-decoration:none;
+            padding-bottom:5px;border-bottom:3px solid var(--red);transition:color .18s,border-color .18s}
+.price .tel:hover{color:#f4a79e;border-color:#f4a79e}
+.price .note{font-size:13px;color:#8c877e}
+
+/* отзывы */
+.score{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.score .big{font-family:"Russo One",sans-serif;font-size:clamp(42px,6.4vw,76px);line-height:.88;color:var(--red)}
+.score .meta{font-size:14.5px;color:var(--muted);line-height:1.45}
+.quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);
+        border:1px solid var(--line);margin-top:clamp(20px,3vw,32px)}
+a.quote{display:flex;flex-direction:column;gap:18px;padding:clamp(18px,2.4vw,28px);background:var(--wall);
+        color:var(--ink);text-decoration:none;transition:background-color .2s}
+a.quote:hover{background:#fff}
+a.quote p{margin:0;font-size:15.5px;line-height:1.6;white-space:pre-line}
+a.quote footer{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:auto;font-size:13px;color:var(--muted)}
+a.quote b{display:block;font-size:14px;font-weight:600;color:var(--ink);margin-bottom:2px}
+a.quote .src{white-space:nowrap;text-decoration:underline;text-decoration-color:var(--line);transition:color .2s,text-decoration-color .2s}
+a.quote:hover .src{color:var(--red);text-decoration-color:var(--red)}
+.more{display:inline-flex;align-items:center;gap:8px;margin-top:18px;min-height:44px;font-size:14.5px;
+      color:var(--ink);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px;text-decoration-color:var(--red)}
+.more:hover{color:var(--red)}
+
+/* адрес */
+.find{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(22px,3.4vw,52px);align-items:start}
+.addr{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.addr li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:baseline;
+         padding:14px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.addr li span{color:var(--muted);font-size:13.5px;text-align:right}
+.addr b{font-weight:600}
+.find .cta{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px}
+.photos{display:grid;gap:14px;margin:0}
+.photos figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.photos img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.photos figcaption{padding:10px 14px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line)}
+
+/* подвал */
+footer.site{background:var(--ink);color:#b6b0a5;padding:clamp(30px,4vw,46px) 0 calc(26px + env(safe-area-inset-bottom));font-size:13.5px;background-image:none}
+footer.site .row{display:flex;justify-content:space-between;gap:14px 28px;flex-wrap:wrap;align-items:baseline}
+footer.site a{color:var(--wall);text-decoration:none;border-bottom:1px solid #4a463e;transition:color .18s,border-color .18s}
+footer.site a:hover{color:#f09a90;border-color:#f09a90}
+footer.site .links{display:flex;flex-wrap:wrap;gap:16px}
+.disclaimer{margin:22px 0 0;font-size:12px;color:#7e796f;max-width:76ch}
+
+.callbar{display:none}
+
+@media (max-width:900px){
+  nav{display:none}
+  header.site .btn{display:none}
+  .hero-grid,.price .grid,.find{grid-template-columns:1fr}
+  .hero-actions{justify-content:flex-start}
+  .quotes{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .bar{min-height:60px}
+  .brand small{display:none}
+  .tel-top{display:none}
+  .hero-figure img{height:clamp(230px,34vh,320px);object-position:50% 50%}
+  .facts{gap:5px 18px;font-size:12.5px}
+  .lede{font-size:16px}
+  footer.site{padding-bottom:calc(92px + env(safe-area-inset-bottom))}
+  .callbar{display:grid;grid-template-columns:1.25fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:60;
+           padding:10px var(--pad) calc(10px + env(safe-area-inset-bottom));background:var(--ink);
+           border-top:1px solid #3a3630}
+  .callbar .btn{width:100%;min-height:48px;padding:0 12px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important}
+  .btn:active{transform:none}
+}
+</style>
+</head>
+<body id="top">
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="#top">
+      <svg class="mark" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M115.59,53.27 L115.59,66.73 L101.72,64.83 L98.55,76.68 L111.51,81.97 L104.78,93.62 L93.72,85.04 L85.04,93.72 L93.62,104.78 L81.97,111.51 L76.68,98.55 L64.83,101.72 L66.73,115.59 L53.27,115.59 L55.17,101.72 L43.32,98.55 L38.03,111.51 L26.38,104.78 L34.96,93.72 L26.28,85.04 L15.22,93.62 L8.49,81.97 L21.45,76.68 L18.28,64.83 L4.41,66.73 L4.41,53.27 L18.28,55.17 L21.45,43.32 L8.49,38.03 L15.22,26.38 L26.28,34.96 L34.96,26.28 L26.38,15.22 L38.03,8.49 L43.32,21.45 L55.17,18.28 L53.27,4.41 L66.73,4.41 L64.83,18.28 L76.68,21.45 L81.97,8.49 L93.62,15.22 L85.04,26.28 L93.72,34.96 L104.78,26.38 L111.51,38.03 L98.55,43.32 L101.72,55.17 Z"/>
+        <circle class="disc" cx="60" cy="60" r="34"/>
+        <text class="num" x="60" y="79" text-anchor="middle" font-size="42">03</text>
+      </svg>
+      <span><b>Шиномонтаж 03</b><small>улица Тулаева, 112а/5</small></span>
+    </a>
+    <nav aria-label="Разделы страницы">
+      <a href="#raboty">Работы</a>
+      <a href="#cena">Цены</a>
+      <a href="#otzyvy">Отзывы</a>
+      <a href="#adres">Адрес</a>
+    </nav>
+    <div class="bar-actions">
+      <a class="tel-top" href="tel:+79024565885">+7 902 456-58-85</a>
+      <a class="btn btn-solid" href="https://web.max.ru/218861244" target="_blank" rel="noopener">Написать в MAX</a>
+    </div>
+  </div>
+</header>
+
+<figure class="hero-figure">
+  <img src="assets/hero-wall.jpg" width="850" height="295"
+       alt="Роспись на стене бокса: красный седан и краской перечислены работы — продажа шин и дисков, балансировка, правка литых дисков, телефон">
+</figure>
+
+<div class="fascia">
+  <div class="wrap">
+    <h1>
+      <span class="l1">Шиномонтаж
+        <svg class="gear" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M115.59,53.27 L115.59,66.73 L101.72,64.83 L98.55,76.68 L111.51,81.97 L104.78,93.62 L93.72,85.04 L85.04,93.72 L93.62,104.78 L81.97,111.51 L76.68,98.55 L64.83,101.72 L66.73,115.59 L53.27,115.59 L55.17,101.72 L43.32,98.55 L38.03,111.51 L26.38,104.78 L34.96,93.72 L26.28,85.04 L15.22,93.62 L8.49,81.97 L21.45,76.68 L18.28,64.83 L4.41,66.73 L4.41,53.27 L18.28,55.17 L21.45,43.32 L8.49,38.03 L15.22,26.38 L26.28,34.96 L34.96,26.28 L26.38,15.22 L38.03,8.49 L43.32,21.45 L55.17,18.28 L53.27,4.41 L66.73,4.41 L64.83,18.28 L76.68,21.45 L81.97,8.49 L93.62,15.22 L85.04,26.28 L93.72,34.96 L104.78,26.38 L111.51,38.03 L98.55,43.32 L101.72,55.17 Z"/>
+          <circle class="disc" cx="60" cy="60" r="33"/>
+          <text class="num" x="60" y="79" text-anchor="middle" font-size="42">03</text>
+        </svg>
+        <span class="sr-only">03</span>
+      </span>
+      <span class="l2">улица Тулаева, 112а/5 · Улан-Удэ</span>
+    </h1>
+
+    <div class="hero-grid">
+      <p class="lede">Колёса и диски: монтаж, балансировка, правка литых, ремонт боковых порезов, вулканизация и аргонная сварка. Без записи, <strong>каждый день с 09:00 до 21:00</strong>. Если машина не на ходу — выезд на дом.</p>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="https://web.max.ru/218861244" target="_blank" rel="noopener">Написать в MAX</a>
+        <a class="btn btn-line" href="https://2gis.ru/ulanude/firm/70000001064720747" target="_blank" rel="noopener">Маршрут в 2ГИС</a>
+      </div>
+    </div>
+
+    <div class="facts">
+      <span><b>5,0</b> из 5 — оценка в 2ГИС</span>
+      <span><b>120</b> оценок</span>
+      <span class="award">Номинант премии 2ГИС 2026</span>
+      <span>Ежедневно с 09:00 до 21:00</span>
+    </div>
+  </div>
+</div>
+
+<section id="raboty">
+  <div class="wrap">
+    <svg class="paint" viewBox="0 0 320 26" aria-hidden="true" focusable="false">
+      <path class="swipe" d="M2 19.5c34-5.6 74-8.7 121-9.8 45-1.1 102-.4 195 3.4v4.6c-72 3.2-139 4.6-197 4.4C75 22 33 21.3 2 20.8Z"/>
+    </svg>
+    <div class="sec-head">
+      <h2>Чем занят бокс</h2>
+      <p>Всё, что написано краской на стене, делают здесь же — на Тулаева, 112а/5.</p>
+    </div>
+    <ul class="svc">
+      <li>
+        <span class="n">01</span>
+        <h3>Шиномонтаж</h3>
+        <p>Снятие и установка колёс, монтаж и демонтаж шины, балансировка, правка дисков, ремонт порезов, сварка дисков.</p>
+      </li>
+      <li>
+        <span class="n">02</span>
+        <h3>Шины и диски</h3>
+        <p>Продажа шин и дисков — на месте, по наличию.</p>
+      </li>
+      <li>
+        <span class="n">03</span>
+        <h3>Выезд на дом</h3>
+        <p>Мастер приезжает к машине. Адрес и время — по телефону.</p>
+      </li>
+      <li>
+        <span class="n">04</span>
+        <h3>Доставка</h3>
+        <p>Условия и адрес доставки уточняйте по телефону.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="cena" class="price">
+  <div class="wrap">
+    <h2>Сколько стоит</h2>
+    <div class="grid">
+      <div>
+        <p class="big" style="margin-top:18px">Цену называют по телефону или в мессенджере</p>
+        <p>Стоимость зависит от радиуса колеса и набора работ: одна балансировка или комплект с правкой литого диска стоят по-разному.</p>
+      </div>
+      <div class="side">
+        <a class="tel" href="tel:+79024565885">+7 902 456-58-85</a>
+        <a class="btn btn-solid" href="https://web.max.ru/218861244" target="_blank" rel="noopener">Написать в MAX</a>
+        <span class="note">Ежедневно с 09:00 до 21:00</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="otzyvy">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Что говорят</h2>
+      <div class="score">
+        <span class="big">5,0</span>
+        <span class="meta">средняя оценка<br>120 оценок в 2ГИС</span>
+      </div>
+    </div>
+    <div class="quotes">
+      <a class="quote" href="https://2gis.ru/ulanude/firm/70000001064720747/tab/reviews/review/310564344" target="_blank" rel="noopener">
+        <p>«Отличные ребята!, быстро нашли и устранили проблему!»</p>
+        <footer><span><b>Денис</b>28 октября 2026</span><span class="src">2ГИС</span></footer>
+      </a>
+      <a class="quote" href="https://2gis.ru/ulanude/firm/70000001064720747/tab/reviews/review/307639970" target="_blank" rel="noopener">
+        <p>«Быстрое обслуживание, приветливый персонал 👌»</p>
+        <footer><span><b>Галина З*</b>19 октября 2026</span><span class="src">2ГИС</span></footer>
+      </a>
+      <a class="quote" href="https://2gis.ru/ulanude/firm/70000001064720747/tab/reviews/review/307379007" target="_blank" rel="noopener">
+        <p>«Рекомендую этот сервис, всё хорошо сделали ,выправили литьё .итд . Благодарю»</p>
+        <footer><span><b>Иван Мартынов</b>18 октября 2026</span><span class="src">2ГИС</span></footer>
+      </a>
+      <a class="quote" href="https://2gis.ru/ulanude/firm/70000001064720747/tab/reviews/review/306447598" target="_blank" rel="noopener">
+        <p>«Отличный шиномонтаж!
+Ребятам респект🔥
+Быстро и качественно!»</p>
+        <footer><span><b>Анна ✨</b>15 октября 2026</span><span class="src">2ГИС</span></footer>
+      </a>
+    </div>
+    <a class="more" href="https://2gis.ru/ulanude/firm/70000001064720747/tab/reviews" target="_blank" rel="noopener">Все 120 оценок в 2ГИС</a>
+  </div>
+</section>
+
+<section id="adres">
+  <div class="wrap">
+    <div class="sec-head"><h2>Как найти</h2></div>
+    <div class="find">
+      <div>
+        <ul class="addr">
+          <li><b>улица Тулаева, 112а/5</b><span>Улан-Удэ</span></li>
+          <li><b>Октябрьский район</b><span>670013</span></li>
+          <li><b>Ежедневно с 09:00 до 21:00</b><span>без выходных</span></li>
+          <li><a href="tel:+79024565885">+7 902 456-58-85</a><span>телефон</span></li>
+        </ul>
+        <div class="cta">
+          <a class="btn btn-line" href="https://2gis.ru/ulanude/firm/70000001064720747" target="_blank" rel="noopener">Открыть в 2ГИС</a>
+          <a class="btn btn-solid" href="https://web.max.ru/218861244" target="_blank" rel="noopener">Написать в MAX</a>
+        </div>
+      </div>
+      <div class="photos">
+        <figure>
+          <img src="assets/photo1.jpg" width="1280" height="656" loading="lazy"
+               alt="Переносной указатель «Шиномонтаж 03» с колесом и красной стрелкой вправо, стоит у въезда на грунтовой площадке">
+          <figcaption>Указатель на въезде: красная стрелка вправо</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/photo5.jpg" width="1280" height="664" loading="lazy"
+               alt="Внедорожник стоит на площадке у стены с росписью «Шиномонтаж 03»">
+          <figcaption>Площадка у бокса, там же где роспись</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="row">
+      <span>Шиномонтаж 03 · Улан-Удэ, улица Тулаева, 112а/5 · <a href="tel:+79024565885">+7 902 456-58-85</a></span>
+      <div class="links">
+        <a href="https://web.max.ru/218861244" target="_blank" rel="noopener">MAX</a>
+        <a href="https://t.me/+79836334822" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://wa.me/79024565885?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%0A%0A%D0%9F%D0%B8%D1%88%D1%83%20%D0%B8%D0%B7%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%202%D0%93%D0%98%D0%A1.%0A%0A" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://2gis.ru/ulanude/firm/70000001064720747" target="_blank" rel="noopener">Карточка в 2ГИС</a>
+      </div>
+    </div>
+    <p class="disclaimer">Демонстрационная страница. Данные и фото — из открытой карточки организации в 2ГИС.</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-solid" href="https://web.max.ru/218861244" target="_blank" rel="noopener">Написать в MAX</a>
+  <a class="btn btn-line-light" href="tel:+79024565885">Позвонить</a>
+</div>
+
+</body>
+</html>

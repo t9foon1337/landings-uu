@@ -1,0 +1,75 @@
+{
+ "id": "70000001068620709",
+ "name": "Колесо+",
+ "rating": 4.8,
+ "reviews_count": 72,
+ "address": "Улица Широких-Полянского, 23/1",
+ "district": "Октябрьский район, Улан-Удэ, 670031",
+ "hours": "Ежедневно с 10:00 до 01:00",
+ "phones": [
+  "+7 (991) 369-41-13",
+  "+7 (991) 369-41-13"
+ ],
+ "messengers": {
+  "Telegram": "https://t.me/+79913694113",
+  "MAX": "https://max.ru/u/f9LHodD0cOKo7LkLfn5T5PmiDH79_Me1GoqydEZdVsxPCann2BFLZDUNUDg"
+ },
+ "services": [
+  "Шины и диски",
+  "Выкуп автошин б/уПродажа автошин б/у",
+  "Шиномонтаж"
+ ],
+ "pricePhotos": [
+  "assets/price1.jpg",
+  "assets/price2.jpg",
+  "assets/price3.jpg"
+ ],
+ "photos": [
+  "assets/photo1.jpg",
+  "assets/photo2.jpg",
+  "assets/photo3.jpg",
+  "assets/photo4.jpg",
+  "assets/photo5.jpg"
+ ],
+ "reviews": [
+  {
+   "id": "314058212",
+   "name": "Zhenya G",
+   "date": "2026-11-06",
+   "text": "Отличный шиномонтаж! Свои колеса доверяю только им. Работают быстро, аккуратно и профессионально. Цены честные, без лишних накруток. Мастера не просто молча делают работу, а всё подробно и доступно объясняют.",
+   "rating": 5,
+   "url": "https://2gis.ru/ulanude/firm/70000001068620709/tab/reviews/review/314058212"
+  },
+  {
+   "id": "309102148",
+   "name": "Андрей Алексеевич",
+   "date": "2026-10-24",
+   "text": "Капитальные красавчики ,знают свою работу ,сделали как надо огромное спасибо,рекомендую ребят",
+   "rating": 5,
+   "url": "https://2gis.ru/ulanude/firm/70000001068620709/tab/reviews/review/309102148"
+  },
+  {
+   "id": "307550746",
+   "name": "Арсалан Макаров",
+   "date": "2026-10-19",
+   "text": "Ребята мастера своего дела. Быстро качественно и с совестью.",
+   "rating": 5,
+   "url": "https://2gis.ru/ulanude/firm/70000001068620709/tab/reviews/review/307550746"
+  },
+  {
+   "id": "301427484",
+   "name": "Валентина Цыб",
+   "date": "2026-10-02",
+   "text": "Молодцы! Приветливые ребята, быстро и качественно, а главное без очереди!",
+   "rating": 5,
+   "url": "https://2gis.ru/ulanude/firm/70000001068620709/tab/reviews/review/301427484"
+  }
+ ],
+ "detected_sites": [],
+ "logo": "",
+ "firmUrl": "https://2gis.ru/ulanude/firm/70000001068620709",
+ "cta": {
+  "label": "Написать в MAX",
+  "href": "https://max.ru/u/f9LHodD0cOKo7LkLfn5T5PmiDH79_Me1GoqydEZdVsxPCann2BFLZDUNUDg"
+ }
+}
