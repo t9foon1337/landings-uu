@@ -542,5 +542,70 @@ footer.site li{padding:5px 0}
   <a class="btn btn-red" href="https://max.ru/u/f9LHodD0cOKo7LkLfn5T5PmiDH79_Me1GoqydEZdVsxPCann2BFLZDUNUDg" target="_blank" rel="noopener">Написать в MAX</a>
   <a class="btn" href="tel:+79913694113">Позвонить</a>
 </div>
+
+<style id="mtn-css">
+  html.mtn .rv{opacity:0;transform:translate3d(0,18px,0);
+    transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);
+    transition-delay:var(--rv-d,0ms);will-change:opacity,transform}
+  html.mtn .rv.in{opacity:1;transform:none}
+  html.mtn .rv-img{clip-path:inset(0 0 100% 0);transition:clip-path 1s cubic-bezier(.2,.7,.2,1);transition-delay:var(--rv-d,0ms)}
+  html.mtn .rv-img.in{clip-path:inset(0 0 0 0)}
+  #mtnBtn{background:none;border:0;padding:8px 0;font:inherit;font-size:12px;color:inherit;opacity:.55;
+    cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+  #mtnBtn:hover,#mtnBtn:focus-visible{opacity:1}
+  @media (prefers-reduced-motion: reduce){
+    html.mtn:not(.mtn-force) .rv,html.mtn:not(.mtn-force) .rv-img{opacity:1;transform:none;clip-path:none;transition:none}
+  }
+</style>
+<script>
+(function(){
+  var d=document.documentElement, st=null, reduce=false;
+  try{st=localStorage.getItem('uu:motion')}catch(e){}
+  try{reduce=matchMedia('(prefers-reduced-motion: reduce)').matches}catch(e){}
+  if(st==='0') return;
+  d.classList.add('mtn');
+  if(reduce) d.classList.add('mtn-force');
+
+  var SEL='main h2,main h3,main figure,main table,main blockquote,main [class*="price-row"],main [class*="card"],main img';
+  var els=[], seen=new Set();
+  [].forEach.call(document.querySelectorAll(SEL),function(el){
+    if(el.closest('header,nav,#mtn-bar')) return;
+    var box=el.getBoundingClientRect();
+    if(box.width<40||box.height<24) return;
+    if(seen.has(el)) return; seen.add(el);
+    els.push(el);
+  });
+  els.forEach(function(el,i){
+    var img = el.tagName==='IMG';
+    el.classList.add(img?'rv-img':'rv');
+    var prev=el.previousElementSibling, k=0;
+    while(prev&&k<4){ if(prev.matches&&prev.matches(SEL)) k++; prev=prev.previousElementSibling; }
+    el.style.setProperty('--rv-d', Math.min(k*70,210)+'ms');
+  });
+
+  var io=null;
+  if('IntersectionObserver' in window){
+    io=new IntersectionObserver(function(rows){
+      rows.forEach(function(r){ if(r.isIntersecting){ r.target.classList.add('in'); io.unobserve(r.target); } });
+    },{rootMargin:'0px 0px -6% 0px',threshold:.06});
+    els.forEach(function(el){ io.observe(el); });
+  } else {
+    els.forEach(function(el){ el.classList.add('in'); });
+  }
+  // страховка: если что-то так и не пересеклось (скрытые табы, странный скролл) — показать
+  setTimeout(function(){ els.forEach(function(el){ if(!el.classList.contains('in')) el.classList.add('in'); }); }, 2600);
+
+  var btn=document.createElement('button');
+  btn.id='mtnBtn'; btn.type='button'; btn.textContent='Выключить анимации';
+  btn.addEventListener('click',function(){
+    d.classList.remove('mtn','mtn-force');
+    try{localStorage.setItem('uu:motion','0')}catch(e){}
+    btn.remove();
+  });
+  var footer=document.querySelector('footer');
+  if(footer){ footer.appendChild(btn); } else { btn.style.cssText='position:fixed;left:16px;bottom:14px;z-index:60'; document.body.appendChild(btn); }
+})();
+</script>
+
 </body>
 </html>
