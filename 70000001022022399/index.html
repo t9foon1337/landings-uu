@@ -242,6 +242,9 @@
 
 
 
+
+
+
 <style id="mtn-css">
   html.mtn .rv{opacity:0;transform:translate3d(0,18px,0);
     transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);
@@ -249,25 +252,14 @@
   html.mtn .rv.in{opacity:1;transform:none}
   html.mtn .rv-img{clip-path:inset(0 0 100% 0);transition:clip-path 1s cubic-bezier(.2,.7,.2,1);transition-delay:var(--rv-d,0ms)}
   html.mtn .rv-img.in{clip-path:inset(0 0 0 0)}
-  #mtn-bar{text-align:center;padding:18px 16px 26px;border-top:1px solid rgba(128,128,128,.14)}
-  @media (max-width:640px){#mtn-bar{padding-bottom:104px}}
-  #mtnBtn{background:none;border:0;padding:8px 0;font:inherit;font-size:12px;color:inherit;opacity:.55;
-    cursor:pointer;text-decoration:underline;text-underline-offset:3px}
-  #mtnBtn:hover,#mtnBtn:focus-visible{opacity:1}
-  @media (prefers-reduced-motion: reduce){
-    html.mtn:not(.mtn-force) .rv,html.mtn:not(.mtn-force) .rv-img{opacity:1;transform:none;clip-path:none;transition:none}
-  }
+
 </style>
 <script>
 (function(){
-  var d=document.documentElement, st=null, reduce=false;
-  try{st=localStorage.getItem('uu:motion')}catch(e){}
+  var d=document.documentElement, reduce=false;
   try{reduce=matchMedia('(prefers-reduced-motion: reduce)').matches}catch(e){}
-  var off = st==='0';
-  if(!off){
-    d.classList.add('mtn');
-    if(reduce) d.classList.add('mtn-force');
-  }
+  if(reduce) return;
+  d.classList.add('mtn');
 
   var SEL='main h2,main h3,main figure,main table,main blockquote,main [class*="price-row"],main [class*="card"],main img';
   var els=[], seen=new Set();
@@ -287,29 +279,17 @@
   });
 
   var io=null;
-  if(!off && 'IntersectionObserver' in window){
+  if('IntersectionObserver' in window){
     io=new IntersectionObserver(function(rows){
       rows.forEach(function(r){ if(r.isIntersecting){ r.target.classList.add('in'); io.unobserve(r.target); } });
     },{rootMargin:'0px 0px -6% 0px',threshold:.06});
     els.forEach(function(el){ io.observe(el); });
-  } else if(!off) {
+  } else {
     els.forEach(function(el){ el.classList.add('in'); });
   }
   // страховка: если что-то так и не пересеклось (скрытые табы, странный скролл) — показать
-  if(!off) setTimeout(function(){ els.forEach(function(el){ if(!el.classList.contains('in')) el.classList.add('in'); }); }, 2600);
+  setTimeout(function(){ els.forEach(function(el){ if(!el.classList.contains('in')) el.classList.add('in'); }); }, 2600);
 
-  var btn=document.createElement('button');
-  btn.id='mtnBtn'; btn.type='button';
-  btn.textContent = off ? 'Включить анимации' : 'Выключить анимации';
-  btn.addEventListener('click',function(){
-    try{ localStorage.setItem('uu:motion', off ? '1' : '0'); }catch(e){}
-    if(!off){ d.classList.remove('mtn','mtn-force'); btn.textContent='Включить анимации'; }
-    else { location.reload(); }
-  });
-  var bar=document.createElement('div');
-  bar.id='mtn-bar';
-  bar.appendChild(btn);
-  document.body.appendChild(bar);
 })();
 </script>
 

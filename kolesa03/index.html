@@ -5,12 +5,10 @@
 (function(){
   var d = document.documentElement;
   d.className = d.className.replace('no-js','js');
-  var stored = null;
-  try { stored = localStorage.getItem('k03:motion'); } catch(e){}
   var reduce = false;
   try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch(e){}
   d.setAttribute('data-reduce', String(reduce));
-  if (stored !== '0'){ d.classList.add('motion','force-motion'); }
+  if (!reduce){ d.classList.add('motion'); }
 })();
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -282,11 +280,11 @@
     .score .big{font-size:44px}
   }
   @media (prefers-reduced-motion:reduce){
-    html:not(.force-motion) .hero-media img{animation:none;transform:none}
-    html:not(.force-motion) .rise{animation:none !important;opacity:1 !important}
-    html:not(.force-motion) [data-reveal]{transform:none !important;transition:opacity .2s linear}
-    html:not(.force-motion) .tread::before{transform:none}
-    html:not(.force-motion){scroll-behavior:auto}
+    .hero-media img{animation:none;transform:none}
+    .rise{animation:none !important;opacity:1 !important}
+    [data-reveal]{transform:none !important;transition:opacity .2s linear}
+    .tread::before{transform:none}
+    html{scroll-behavior:auto}
   }
 </style>
 </head>
@@ -527,7 +525,6 @@
       </div>
       <div><a href="https://2gis.ru/ulanude/firm/70000001109624187" target="_blank" rel="noopener">Карточка в 2ГИС</a></div>
     </div>
-    <button class="motion-toggle" id="motionBtn" type="button" hidden>Показать анимации</button>
     <p class="disclaimer">Страница-образец: цены, отзывы и фотографии взяты из карточки организации в 2ГИС. Не является официальным сайтом компании.</p>
   </div>
 </footer>
@@ -540,8 +537,6 @@
 <script>
 (function(){
   var doc = document.documentElement;
-  var reduceMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
-  var enabled = doc.classList.contains('motion');
 
   function hasMotion(){ return doc.classList.contains('motion'); }
 
@@ -632,29 +627,10 @@
     tween(pickB, priceB[r]);
   }
 
-  /* переключатель анимаций для систем с выключенными эффектами */
-  var motionBtn = document.getElementById('motionBtn');
-  function syncToggle(){
-    if (!motionBtn) return;
-    motionBtn.hidden = !reduceMQ.matches;
-    motionBtn.textContent = enabled ? 'Выключить анимации' : 'Показать анимации';
-    motionBtn.setAttribute('aria-pressed', String(enabled));
-  }
-  if (motionBtn){
-    motionBtn.addEventListener('click', function(){
-      enabled = !enabled;
-      try { localStorage.setItem('k03:motion', enabled ? '1' : '0'); } catch(e){}
-      doc.classList.toggle('force-motion', enabled);
-      if (enabled){ restartHero(); } else { doc.classList.remove('motion'); }
-      initReveals(); initTread(); syncToggle();
-    });
-  }
-  if (reduceMQ.addEventListener) reduceMQ.addEventListener('change', syncToggle);
-
   chips.forEach(function(c){ c.addEventListener('click', function(){ select(c.dataset.r, true); }); });
   select('16', false);
   centerColumn('16', true);
-  initReveals(); initTread(); syncToggle();
+  initReveals(); initTread();
 })();
 </script>
 
