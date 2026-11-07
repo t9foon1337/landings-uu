@@ -492,6 +492,12 @@ h3{font-weight:600;font-size:clamp(17px,1.4vw,20px);line-height:1.3}
 </div>
 
 
+
+
+
+
+
+
 <style id="mtn-css">
   html.mtn .rv{opacity:0;transform:translate3d(0,18px,0);
     transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);
@@ -499,6 +505,8 @@ h3{font-weight:600;font-size:clamp(17px,1.4vw,20px);line-height:1.3}
   html.mtn .rv.in{opacity:1;transform:none}
   html.mtn .rv-img{clip-path:inset(0 0 100% 0);transition:clip-path 1s cubic-bezier(.2,.7,.2,1);transition-delay:var(--rv-d,0ms)}
   html.mtn .rv-img.in{clip-path:inset(0 0 0 0)}
+  #mtn-bar{text-align:center;padding:18px 16px 26px;border-top:1px solid rgba(128,128,128,.14)}
+  @media (max-width:640px){#mtn-bar{padding-bottom:104px}}
   #mtnBtn{background:none;border:0;padding:8px 0;font:inherit;font-size:12px;color:inherit;opacity:.55;
     cursor:pointer;text-decoration:underline;text-underline-offset:3px}
   #mtnBtn:hover,#mtnBtn:focus-visible{opacity:1}
@@ -511,9 +519,11 @@ h3{font-weight:600;font-size:clamp(17px,1.4vw,20px);line-height:1.3}
   var d=document.documentElement, st=null, reduce=false;
   try{st=localStorage.getItem('uu:motion')}catch(e){}
   try{reduce=matchMedia('(prefers-reduced-motion: reduce)').matches}catch(e){}
-  if(st==='0') return;
-  d.classList.add('mtn');
-  if(reduce) d.classList.add('mtn-force');
+  var off = st==='0';
+  if(!off){
+    d.classList.add('mtn');
+    if(reduce) d.classList.add('mtn-force');
+  }
 
   var SEL='main h2,main h3,main figure,main table,main blockquote,main [class*="price-row"],main [class*="card"],main img';
   var els=[], seen=new Set();
@@ -533,26 +543,29 @@ h3{font-weight:600;font-size:clamp(17px,1.4vw,20px);line-height:1.3}
   });
 
   var io=null;
-  if('IntersectionObserver' in window){
+  if(!off && 'IntersectionObserver' in window){
     io=new IntersectionObserver(function(rows){
       rows.forEach(function(r){ if(r.isIntersecting){ r.target.classList.add('in'); io.unobserve(r.target); } });
     },{rootMargin:'0px 0px -6% 0px',threshold:.06});
     els.forEach(function(el){ io.observe(el); });
-  } else {
+  } else if(!off) {
     els.forEach(function(el){ el.classList.add('in'); });
   }
   // страховка: если что-то так и не пересеклось (скрытые табы, странный скролл) — показать
-  setTimeout(function(){ els.forEach(function(el){ if(!el.classList.contains('in')) el.classList.add('in'); }); }, 2600);
+  if(!off) setTimeout(function(){ els.forEach(function(el){ if(!el.classList.contains('in')) el.classList.add('in'); }); }, 2600);
 
   var btn=document.createElement('button');
-  btn.id='mtnBtn'; btn.type='button'; btn.textContent='Выключить анимации';
+  btn.id='mtnBtn'; btn.type='button';
+  btn.textContent = off ? 'Включить анимации' : 'Выключить анимации';
   btn.addEventListener('click',function(){
-    d.classList.remove('mtn','mtn-force');
-    try{localStorage.setItem('uu:motion','0')}catch(e){}
-    btn.remove();
+    try{ localStorage.setItem('uu:motion', off ? '1' : '0'); }catch(e){}
+    if(!off){ d.classList.remove('mtn','mtn-force'); btn.textContent='Включить анимации'; }
+    else { location.reload(); }
   });
-  var footer=document.querySelector('footer');
-  if(footer){ footer.appendChild(btn); } else { btn.style.cssText='position:fixed;left:16px;bottom:14px;z-index:60'; document.body.appendChild(btn); }
+  var bar=document.createElement('div');
+  bar.id='mtn-bar';
+  bar.appendChild(btn);
+  document.body.appendChild(bar);
 })();
 </script>
 
